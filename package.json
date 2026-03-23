@@ -5,7 +5,8 @@
     "build:all": "pnpm -r build",
     "serve:01": "pnpm --filter etape-01-installation start",
     "serve:02": "pnpm --filter etape-02-composants start",
-    "serve:03": "pnpm --filter etape-03-services start"
+    "serve:03": "pnpm --filter etape-03-services start",
+    "serve:04": "pnpm --filter etape-04-signals start"
   },
   "packageManager": "pnpm@10.6.5"
 }
