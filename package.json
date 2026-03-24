@@ -10,7 +10,8 @@
     "serve:05": "pnpm --filter etape-05-control-flow start",
     "serve:06": "pnpm --filter etape-06-services start",
     "serve:07": "pnpm --filter etape-07-communication start",
-    "serve:08": "pnpm --filter etape-08-pipes start"
+    "serve:08": "pnpm --filter etape-08-pipes start",
+    "serve:09": "pnpm --filter etape-09-directives start"
   },
   "packageManager": "pnpm@10.6.5"
 }
