@@ -2,7 +2,7 @@
 
 ## Objectif
 
-Créer des Pipes personnalisés pour transformer l'affichage des données. Vous allez créer des pipes pour capitaliser les noms, formater les IDs et colorer les badges de type.
+Utiliser les pipes built-in Angular et créer des Pipes personnalisés pour transformer l'affichage des données. Vous allez utiliser une pipe built-in pour capitaliser le nom des Pokemons puis vous allez créer des pipes pour formater les IDs et colorer les badges de type.
 
 ## Résultat attendu
 
@@ -12,7 +12,6 @@ Créer des Pipes personnalisés pour transformer l'affichage des données. Vous 
 
 ## Fichiers à créer/modifier
 
-- `src/app/pipes/capitalize.pipe.ts` (via `ng g p pipes/capitalize`)
 - `src/app/pipes/pokemon-id.pipe.ts` (via `ng g p pipes/pokemon-id`)
 - `src/app/pipes/type-color.pipe.ts` (via `ng g p pipes/type-color`)
 - `src/app/pokemon-list/pokemon-list.component.ts` (utilisation des pipes)
@@ -47,18 +46,21 @@ Créer des Pipes personnalisés pour transformer l'affichage des données. Vous 
 <summary>Pipe non reconnu dans le template ?</summary>
 
 Importez le pipe dans `imports: []` du composant qui l'utilise.
+
 </details>
 
 <details>
 <summary>Comment utiliser le pipe pour un style ?</summary>
 
 `[style.background]="type | typeColor"` - le pipe retourne une couleur CSS.
+
 </details>
 
 <details>
 <summary>Le pipe ne se met pas à jour ?</summary>
 
 Les pipes sont "purs" par défaut. Pour les mutations d'objets, utilisez `pure: false` (à éviter si possible).
+
 </details>
 
 ## Prochaine étape
