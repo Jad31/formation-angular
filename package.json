@@ -8,7 +8,8 @@
     "serve:03": "pnpm --filter etape-03-data-binding start",
     "serve:04": "pnpm --filter etape-04-signals start",
     "serve:05": "pnpm --filter etape-05-control-flow start",
-    "serve:06": "pnpm --filter etape-06-services start"
+    "serve:06": "pnpm --filter etape-06-services start",
+    "serve:07": "pnpm --filter etape-07-communication start"
   },
   "packageManager": "pnpm@10.6.5"
 }
