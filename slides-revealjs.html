@@ -1,0 +1,3749 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formation Angular 21 - Complète</title>
+    <meta name="description"
+      content="Formation Angular 21">
+    <meta name="author" content="Formation Angular">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="angular_gradient.png">
+
+    <!-- Google Fonts - Angular Official -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet">
+
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css">
+
+    <!-- Syntax highlighting -->
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css">
+
+    <!-- Angular Official Styling -->
+    <style>
+    :root {
+      --angular-hot-pink: #e63384;
+      --angular-violet: #8b5cf6;
+      --angular-vivid-pink: #f472b6;
+      --angular-orange: #f97316;
+      --angular-dark-bg: #1a1a2e;
+      --angular-gradient: linear-gradient(90deg, #f97316, #ec4899, #8b5cf6);
+    }
+
+    /* Base font */
+    .reveal {
+      font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+      background: var(--angular-dark-bg);
+    }
+
+    /* Headings */
+    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+      font-family: 'Inter Tight', sans-serif;
+      text-transform: none;
+      font-weight: 600;
+    }
+
+    /* H1 with gradient */
+    .reveal h1 {
+      background: var(--angular-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
+    }
+
+    /* H2 accent color */
+    .reveal h2 {
+      color: var(--angular-vivid-pink);
+    }
+
+    /* Code fonts */
+    .reveal pre, .reveal code {
+      font-family: 'DM Mono', monospace;
+    }
+
+    .reveal pre {
+      width: 100%;
+      font-size: 0.55em;
+    }
+
+    .reveal pre code {
+      max-height: 450px;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+    }
+
+    /* Inline code */
+    code:not(.hljs) {
+      font-family: 'DM Mono', monospace;
+      color: var(--angular-orange);
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Tables */
+    .reveal table {
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      background: rgba(139, 92, 246, 0.3);
+      color: var(--angular-vivid-pink);
+    }
+
+    .reveal table th,
+    .reveal table td {
+      padding: 0.3em 0.6em;
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Lists */
+    .reveal ul, .reveal ol {
+      font-size: 0.85em;
+    }
+
+    /* Links */
+    .reveal a {
+      color: var(--angular-vivid-pink);
+    }
+
+    .reveal a:hover {
+      color: var(--angular-orange);
+    }
+
+    /* Slide number */
+    .reveal .slide-number {
+      font-size: 14px;
+      font-family: 'DM Mono', monospace;
+      color: var(--angular-violet);
+    }
+
+    /* Strong/Bold */
+    .reveal strong {
+      color: var(--angular-orange);
+    }
+
+    /* Angular logo bottom left */
+    .reveal::after {
+      content: '';
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 50px;
+      height: 50px;
+      background: url('angular_gradient.png') no-repeat center;
+      background-size: contain;
+      z-index: 1000;
+      opacity: 0.9;
+    }
+  </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- ============================================ -->
+        <!-- COLUMN 0: FORMATEUR (6 slides) -->
+        <!-- ============================================ -->
+        <section>
+          <section>
+            <h1>Formation Angular 21</h1>
+            <h2>Jad Chahed</h2>
+            <p>Rust & Angular Developer | Open Source Contributor</p>
+          </section>
+
+          <section>
+            <h2>Qui suis-je ?</h2>
+            <ul>
+              <li>Frontend Tech Lead @Allfeat</li>
+              <li>Angular Senior Developer @AMUE pour Ministère de l'Éducation
+                Supérieure</li>
+              <li>Contributeur Open Source (Angular, Analogjs, Nx,
+                Vitess...)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Expérience</h2>
+            <ul>
+              <li><strong>Rust</strong> : Leptos, Axum, Tokio</li>
+              <li><strong>Angular</strong> : DX, tooling, guidelines</li>
+              <li><strong>DevOps</strong> : Kubernetes, CI/CD</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Entreprises</h2>
+            <p><a href="https://allfeat.org"
+                target="_blank"><strong>Allfeat</strong></a> - Rust/Web3</p>
+            <p><strong>Ministère de l'Éducation Supérieure</strong> - <a
+                href="https://www.pc-scol.fr/loutil-pegase/"
+                target="_blank">Projet Pégase</a></p>
+          </section>
+
+          <section>
+            <h2>Communauté & Contact</h2>
+            <ul>
+              <li>Organisateur Rust Meetup</li>
+              <li>Speaker KubeCon 2024</li>
+              <li><a href="https://linkedin.com/in/jad-chahed"
+                  target="_blank">LinkedIn</a></li>
+              <li><a href="https://github.com/Jad31"
+                  target="_blank">GitHub</a></li>
+              <li><a href="https://jadchahed.dev/"
+                  target="_blank">jadchahed.dev</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Organisation de la formation</h2>
+            <ul>
+              <li>Horaires : 9h - 17h</li>
+              <li>Pauses : 10h30, 12h30-13h30, 15h30</li>
+              <li>Questions : a tout moment !</li>
+              <li>Exercices pratiques inclus (70% pratique, 30% théorie)</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- COLUMN 1: INTRODUCTION (14 slides) -->
+        <!-- ============================================ -->
+        <section>
+          <section>
+            <h1>Angular 21</h1>
+            <h2>Formation Complète</h2>
+          </section>
+
+          <section>
+            <h2>Bienvenue !</h2>
+            <p>Cette formation vous guidera dans l'apprentissage d'Angular
+              21</p>
+            <p>avec les dernières fonctionnalités et bonnes pratiques.</p>
+          </section>
+
+          <section>
+            <h2>Objectifs de la formation</h2>
+            <ul>
+              <li>Comprendre l'architecture Angular</li>
+              <li>Maîtriser les composants et templates</li>
+              <li>Utiliser les Signals pour la réactivité</li>
+              <li>Créer des services avec injection</li>
+              <li>Construire une application complète</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Programme - Jour 1</h2>
+            <ul>
+              <li>Installation &amp; Configuration</li>
+              <li>Composants &amp; Templates</li>
+              <li>Data Binding &amp; Signals</li>
+              <li>Control Flow (@if, @for, @switch)</li>
+              <li>Services &amp; Injection de dependances</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Programme - Jour 2</h2>
+            <ul>
+              <li>Communication entre composants</li>
+              <li>Pipes (built-in et custom)</li>
+              <li>Directives</li>
+              <li>HttpClient &amp; API REST</li>
+              <li>Formulaires reactifs</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Projet fil rouge</h2>
+            <h3>Pokédex</h3>
+            <ul>
+              <li>Explorer les 151 Pokémon (Gen 1)</li>
+              <li>Recherche et filtres par type</li>
+              <li>Détails et statistiques</li>
+              <li>Favoris avec localStorage</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Qu'est-ce qu'Angular ?</h2>
+            <ul>
+              <li><strong>Framework</strong> front-end complet</li>
+              <li>Développé par <strong>Google</strong></li>
+              <li>Basé sur <strong>TypeScript</strong></li>
+              <li>Architecture <strong>orientée composants</strong></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Historique Angular</h2>
+            <table>
+              <tr><td>2010</td><td>AngularJS (v1)</td></tr>
+              <tr><td>2016</td><td>Angular 2 (réécriture)</td></tr>
+              <tr><td>2023</td><td>v16-17 Signals</td></tr>
+              <tr><td>2024</td><td>v18-19 Standalone</td></tr>
+              <tr><td>2025</td><td><strong>v21</strong> (actuelle)</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Angular 17+ - Révolution</h2>
+            <table>
+              <tr><th>Ancien</th><th>Nouveau (v21)</th></tr>
+              <tr><td>NgModules</td><td>Standalone</td></tr>
+              <tr><td>*ngIf, *ngFor</td><td>@if, @for</td></tr>
+              <tr><td>Zone.js</td><td>Signals</td></tr>
+              <tr><td>constructor DI</td><td>inject()</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Signals - Le futur</h2>
+            <p>Nouvelle primitive de réactivité</p>
+            <ul>
+              <li>Performance optimisée</li>
+              <li>Code plus simple</li>
+              <li>Détection de changements fines</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Architecture Angular</h2>
+            <pre><code>
++-----------------------------------------+
+|              Application                |
++-----------------+-----------------------+
+|   Components    |       Services        |
+|   Templates     |       (inject)        |
+|   Styles        |                       |
++-----------------+-----------------------+
+    </code></pre>
+          </section>
+
+          <section>
+            <h2>Composants</h2>
+            <p>Blocs de construction de l'UI</p>
+            <ul>
+              <li>Classe TypeScript</li>
+              <li>Template HTML</li>
+              <li>Styles CSS isolés</li>
+              <li>Re-utilisables et composables</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Services &amp; DI</h2>
+            <p>Logique métier partagée</p>
+            <ul>
+              <li>Classes injectables</li>
+              <li>Singletons par défaut</li>
+              <li>Séparation des responsabilités</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Questions ?</h2>
+            <p>Avant de commencer...</p>
+          </section>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- COLUMN 2: INSTALLATION (18 slides) -->
+        <!-- ============================================ -->
+        <section>
+          <section>
+            <h1>Installation &amp; Projet</h1>
+            <p>Mise en place de l'environnement</p>
+          </section>
+
+          <section>
+            <h2>Objectifs</h2>
+            <ul>
+              <li>Installer les outils nécessaires</li>
+              <li>Créer un projet Angular</li>
+              <li>Comprendre la structure</li>
+              <li>Lancer l'application</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Prerequis</h2>
+            <table>
+              <tr><th>Outil</th><th>Version</th></tr>
+              <tr><td>Node.js</td><td>20.x ou 22.x</td></tr>
+              <tr><td>npm</td><td>10.x+</td></tr>
+              <tr><td>Angular CLI</td><td>21.x</td></tr>
+              <tr><td>IDE</td><td>VS Code recommandé</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Vérifier Node.js</h2>
+            <pre><code class="language-bash"># Verifier la version
+node -v
+# v22.x.x
+
+npm -v
+# 10.x.x</code></pre>
+          </section>
+
+          <section>
+            <h2>Installer Angular CLI</h2>
+            <pre><code class="language-bash"># Installation globale
+npm install -g @angular/cli
+
+# Vérifier l'installation
+ng version</code></pre>
+          </section>
+
+          <section>
+            <h2>Créer un projet</h2>
+            <pre><code class="language-bash">ng new pokedex</code></pre>
+            <p>Assistant interactif :</p>
+            <ul>
+              <li>Style: CSS/SCSS/SASS/Less</li>
+              <li>SSR: Server-side rendering</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Options de création</h2>
+            <pre><code class="language-bash"># Creation avec options
+ng new pokedex \
+  --style=scss \
+  --ssr=false \
+  --skip-tests</code></pre>
+          </section>
+
+          <section>
+            <h2>Structure du projet</h2>
+            <pre><code>pokedex/
++-- src/
+|   +-- app/
+|   |   +-- app.component.ts
+|   |   +-- app.config.ts
+|   +-- index.html
+|   +-- main.ts
++-- angular.json
++-- package.json</code></pre>
+          </section>
+
+          <section>
+            <h2>main.ts - Point d'entrée</h2>
+            <pre><code class="language-typescript">import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/app.component';
+
+bootstrapApplication(AppComponent, appConfig)
+  .catch(err =&gt; console.error(err));</code></pre>
+          </section>
+
+          <section>
+            <h2>app.config.ts</h2>
+            <pre><code class="language-typescript">import { ApplicationConfig } from '@angular/core';
+import { provideRouter } from '@angular/router';
+import { routes } from './app.routes';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideRouter(routes)
+  ]
+};</code></pre>
+          </section>
+
+          <section>
+            <h2>app.component.ts</h2>
+            <pre><code class="language-typescript">import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `&lt;h1&gt;Hello Angular!&lt;/h1&gt;`,
+  styles: [`h1 { color: #dd0031; }`]
+})
+export class AppComponent {}</code></pre>
+          </section>
+
+          <section>
+            <h2>@Component décortiqué</h2>
+            <table>
+              <tr><th>Propriété</th><th>Description</th></tr>
+              <tr><td>selector</td><td>Balise HTML</td></tr>
+              <tr><td>template</td><td>HTML inline</td></tr>
+              <tr><td>templateUrl</td><td>Fichier HTML</td></tr>
+              <tr><td>styles</td><td>CSS inline</td></tr>
+              <tr><td>styleUrl</td><td>Fichier CSS</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Lancer l'application</h2>
+            <pre><code class="language-bash">cd pokedex
+
+ng serve</code></pre>
+            <p>Ouvrir <strong>http://localhost:4200</strong></p>
+          </section>
+
+          <section>
+            <h2>Options ng serve</h2>
+            <pre><code class="language-bash"># Ouvrir le navigateur
+ng serve --open
+ng serve -o
+
+# Port personnalisé
+ng serve --port 3000</code></pre>
+          </section>
+
+          <section>
+            <h2>Commandes CLI essentielles</h2>
+            <table>
+              <tr><th>Commande</th><th>Action</th></tr>
+              <tr><td>ng generate component</td><td>Créer composant</td></tr>
+              <tr><td>ng generate service</td><td>Créer service</td></tr>
+              <tr><td>ng generate pipe</td><td>Créer pipe</td></tr>
+              <tr><td>ng generate directive</td><td>Créer directive</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Raccourcis CLI</h2>
+            <pre><code class="language-bash">ng g c header       # component
+ng g s pokemon      # service
+ng g p capitalize   # pipe
+ng g d highlight    # directive</code></pre>
+          </section>
+
+          <section>
+            <h2>Exercice 01 - Installation</h2>
+            <ol>
+              <li>Installer Angular CLI globalement</li>
+              <li>Créer projet <code>pokedex</code> (SCSS, sans SSR)</li>
+              <li>Lancer avec <code>ng serve --open</code></li>
+              <li>Explorer la structure du projet</li>
+              <li>Modifier le titre et les styles de base</li>
+            </ol>
+            <p><strong>15 minutes</strong></p>
+          </section>
+
+          <section>
+            <h2>Résumé</h2>
+            <ul>
+              <li>Node.js 20+ requis</li>
+              <li><code>ng new</code> crée un projet</li>
+              <li><code>ng serve</code> lance le serveur</li>
+              <li><code>ng generate</code> crée des éléments</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- COLUMN 3: COMPOSANTS (22 slides) -->
+        <!-- ============================================ -->
+        <section>
+          <section>
+            <h1>Composants &amp; Templates</h1>
+            <p>Les briques de base d'Angular 21</p>
+          </section>
+
+          <section>
+            <h2>Objectifs</h2>
+            <ul>
+              <li>Comprendre l'anatomie d'un composant</li>
+              <li>Créer et utiliser des composants</li>
+              <li>Maîtriser les Templates</li>
+              <li>Projeter du contenu</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Qu'est-ce qu'un composant ?</h2>
+            <p>Un composant = une partie de l'UI</p>
+            <ul>
+              <li>Re-utilisable</li>
+              <li>Isolé (Styles encapsulés)</li>
+              <li>Composable</li>
+              <li>Testable</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Anatomie d'un composant</h2>
+            <pre><code>+---------------------------+
+|       @Component          |
++---------------------------+
+|    Template (HTML)        |
++---------------------------+
+|   Classe (TypeScript)     |
++---------------------------+
+|      Styles (CSS)         |
++---------------------------+</code></pre>
+          </section>
+
+          <section>
+            <h2>@Component - selector</h2>
+            <pre><code class="language-typescript">@Component({
+  selector: 'app-pokemon-card',
+  // ...
+})</code></pre>
+            <p>Utilisé comme balise HTML :</p>
+            <pre><code class="language-html">&lt;app-pokemon-card&gt;&lt;/app-pokemon-card&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>@Component - template</h2>
+            <pre><code class="language-typescript">@Component({
+  selector: 'app-hello',
+  template: `
+    &lt;h1&gt;Bonjour !&lt;/h1&gt;
+    &lt;p&gt;Bienvenue&lt;/p&gt;
+  `
+})</code></pre>
+            <p>Template inline avec backticks</p>
+          </section>
+
+          <section>
+            <h2>@Component - styles</h2>
+            <pre><code class="language-typescript">@Component({
+  selector: 'app-hello',
+  template: `&lt;h1&gt;Hello&lt;/h1&gt;`,
+  styles: [`
+    h1 {
+      color: #dd0031;
+      font-size: 2rem;
+    }
+  `]
+})</code></pre>
+          </section>
+
+          <section>
+            <h2>Standalone Components</h2>
+            <p>Par défaut depuis Angular 19+</p>
+            <pre><code class="language-typescript">@Component({
+  selector: 'app-hello',
+  standalone: true,  // implicite en v21
+  template: `&lt;h1&gt;Hello&lt;/h1&gt;`
+})</code></pre>
+            <p>Plus besoin de NgModules !</p>
+          </section>
+
+          <section>
+            <h2>Générer un composant</h2>
+            <pre><code class="language-bash">ng generate component pokemon-card
+
+# ou raccourci
+ng g c pokemon-card</code></pre>
+            <p>Crée 4 fichiers dans <code>src/app/pokemon-card/</code></p>
+          </section>
+
+          <section>
+            <h2>Options de génération</h2>
+            <pre><code class="language-bash"># Template et styles inline
+ng g c header --inline-template --inline-style
+
+# Sans fichier de test
+ng g c header --skip-tests
+
+# Dans un dossier spécifique
+ng g c components/header</code></pre>
+          </section>
+
+          <section>
+            <h2>Convention de nommage</h2>
+            <ul>
+              <li>Prefixe : <code>app-</code> par défaut</li>
+              <li>Nom : <strong>kebab-case</strong></li>
+              <li>Classe : <strong>PascalCase</strong></li>
+            </ul>
+            <pre><code class="language-typescript">// pokemon-card.component.ts
+selector: 'app-pokemon-card'
+class PokemonCardComponent</code></pre>
+          </section>
+
+          <section>
+            <h2>Template inline</h2>
+            <pre><code class="language-typescript">@Component({
+  selector: 'app-simple',
+  template: `
+    &lt;div class="card"&gt;
+      &lt;h2&gt;{{ title }}&lt;/h2&gt;
+    &lt;/div&gt;
+  `
+})
+export class SimpleComponent {
+  title = 'Mon titre';
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Template externe</h2>
+            <pre><code class="language-typescript">@Component({
+  selector: 'app-complex',
+  templateUrl: './complex.component.html',
+  styleUrl: './complex.component.scss'
+})
+export class ComplexComponent {
+  // ...
+}</code></pre>
+            <p>Recommandé pour templates &gt; 3 lignes</p>
+          </section>
+
+          <section>
+            <h2>Exemple PokemonCard</h2>
+            <pre><code class="language-typescript">@Component({
+  selector: 'app-pokemon-card',
+  template: `
+    &lt;div class="pokemon"&gt;
+      &lt;img [src]="pokemon.sprite" /&gt;
+      &lt;span&gt;{{ pokemon.name }}&lt;/span&gt;
+    &lt;/div&gt;
+  `
+})
+export class PokemonCardComponent {
+  pokemon = { name: 'Pikachu', sprite: '...' };
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Composition - imports</h2>
+            <pre><code class="language-typescript">import { PokemonCardComponent } from './pokemon-card';
+
+@Component({
+  selector: 'app-pokemon-list',
+  imports: [PokemonCardComponent],
+  template: `
+    &lt;app-pokemon-card /&gt;
+    &lt;app-pokemon-card /&gt;
+  `
+})</code></pre>
+          </section>
+
+          <section>
+            <h2>Règle des imports</h2>
+            <p><strong>Importer dans imports :</strong></p>
+            <ul>
+              <li>Composants utilisés dans le template</li>
+              <li>Directives (@if, @for via CommonModule)</li>
+              <li>Pipes</li>
+              <li>Modules Angular (FormsModule...)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>ViewEncapsulation</h2>
+            <pre><code class="language-typescript">import { ViewEncapsulation } from '@angular/core';
+
+@Component({
+  encapsulation: ViewEncapsulation.Emulated // défaut
+  // ViewEncapsulation.None
+  // ViewEncapsulation.ShadowDom
+})</code></pre>
+          </section>
+
+          <section>
+            <h2>:host - Cibler le composant</h2>
+            <pre><code class="language-css">:host {
+  display: block;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+:host(.active) {
+  border-color: blue;
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>ng-content</h2>
+            <p>Projéction de contenu</p>
+            <pre><code class="language-typescript">// card.component.ts
+template: `
+  &lt;div class="card"&gt;
+    &lt;ng-content&gt;&lt;/ng-content&gt;
+  &lt;/div&gt;
+`</code></pre>
+            <pre><code class="language-html">&lt;app-card&gt;
+  &lt;p&gt;Contenu projete !&lt;/p&gt;
+&lt;/app-card&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Multi-slot projection</h2>
+            <pre><code class="language-typescript">template: `
+  &lt;header&gt;
+    &lt;ng-content select="[header]"&gt;&lt;/ng-content&gt;
+  &lt;/header&gt;
+  &lt;main&gt;
+    &lt;ng-content&gt;&lt;/ng-content&gt;
+  &lt;/main&gt;
+`</code></pre>
+            <pre><code class="language-html">&lt;app-card&gt;
+  &lt;h2 header&gt;Titre&lt;/h2&gt;
+  &lt;p&gt;Contenu principal&lt;/p&gt;
+&lt;/app-card&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Exercice 02 - Composants</h2>
+            <ol>
+              <li>Créer <code>HeaderComponent</code> avec titre et logo</li>
+              <li>Créer <code>PokemonCardComponent</code></li>
+              <li>Importer et afficher le header dans App</li>
+              <li>Utiliser <code>ng-content</code> dans PokemonCard</li>
+              <li>Styliser les composants (CSS de base)</li>
+            </ol>
+            <p><strong>25 minutes</strong></p>
+          </section>
+
+          <section>
+            <h2>Résumé</h2>
+            <ul>
+              <li>Composant = classe + template + styles</li>
+              <li><code>ng g c</code> génère un composant</li>
+              <li><code>imports</code> pour la composition</li>
+              <li><code>ng-content</code> pour la projection</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- COLUMN 4: DATA BINDING & SIGNALS (30 slides) -->
+        <!-- ============================================ -->
+        <section>
+          <section>
+            <h1>Data Binding &amp; Signals</h1>
+            <p>Reactivite moderne en Angular</p>
+          </section>
+
+          <section>
+            <h2>Objectifs</h2>
+            <ul>
+              <li>Maîtriser les 4 types de binding</li>
+              <li>Comprendre les Signals</li>
+              <li>Créer des valeurs reactives</li>
+              <li>Utiliser computed() et effect()</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>4 types de binding</h2>
+            <table>
+              <tr><th>Type</th><th>Syntaxe</th><th>Direction</th></tr>
+              <tr><td>Interpolation</td><td>{{ }}</td><td>&rarr; DOM</td></tr>
+              <tr><td>Property</td><td>[ ]</td><td>&rarr; DOM</td></tr>
+              <tr><td>Event</td><td>( )</td><td>&larr; DOM</td></tr>
+              <tr><td>Two-way</td><td>[( )]</td><td>&harr; DOM</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Interpolation {{ }}</h2>
+            <pre><code class="language-typescript">export class AppComponent {
+  title = 'Pokédex';
+  count = 151;
+}</code></pre>
+            <pre><code class="language-html">&lt;h1&gt;{{ title }}&lt;/h1&gt;
+&lt;p&gt;{{ count }} Pokémon&lt;/p&gt;
+&lt;p&gt;{{ count * 2 }}&lt;/p&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Interpolation - OK</h2>
+            <pre><code class="language-html">&lt;!-- Propriétés --&gt;
+{{ user.name }}
+
+&lt;!-- Expressions --&gt;
+{{ price * quantity }}
+
+&lt;!-- Méthodes --&gt;
+{{ getFullName() }}
+
+&lt;!-- Ternaire --&gt;
+{{ isActive ? 'Oui' : 'Non' }}</code></pre>
+          </section>
+
+          <section>
+            <h2>Interpolation - Interdit</h2>
+            <pre><code class="language-html">&lt;!-- Pas d'assignation --&gt;
+{{ count = 5 }}  &lt;!-- ERREUR --&gt;
+
+&lt;!-- Pas de new --&gt;
+{{ new Date() }}  &lt;!-- ERREUR --&gt;
+
+&lt;!-- Pas d'incrementation --&gt;
+{{ count++ }}  &lt;!-- ERREUR --&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Property binding [ ]</h2>
+            <pre><code class="language-html">&lt;!-- Lier une propriete DOM --&gt;
+&lt;img [src]="imageUrl" /&gt;
+
+&lt;!-- Desactiver un bouton --&gt;
+&lt;button [disabled]="isLoading"&gt;
+  Envoyer
+&lt;/button&gt;
+
+&lt;!-- Classe conditionnelle --&gt;
+&lt;div [class.active]="isActive"&gt;&lt;/div&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Property vs Attribute</h2>
+            <pre><code class="language-html">&lt;!-- Property binding (recommandé) --&gt;
+&lt;input [value]="name" /&gt;
+
+&lt;!-- Attribute binding --&gt;
+&lt;td [attr.colspan]="cols"&gt;&lt;/td&gt;</code></pre>
+            <p>Utiliser <code>attr.</code> pour les attributs HTML purs</p>
+          </section>
+
+          <section>
+            <h2>Event binding ( )</h2>
+            <pre><code class="language-html">&lt;button (click)="onSave()"&gt;
+  Sauvegarder
+&lt;/button&gt;
+
+&lt;input (input)="onInput($event)" /&gt;
+
+&lt;form (submit)="onSubmit()"&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>$event - L'objet evenement</h2>
+            <pre><code class="language-typescript">onInput(event: Event) {
+  const input = event.target as HTMLInputElement;
+  console.log(input.value);
+}</code></pre>
+            <pre><code class="language-html">&lt;input (input)="onInput($event)" /&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Raccourcis clavier</h2>
+            <pre><code class="language-html">&lt;!-- Touche Enter --&gt;
+&lt;input (keydown.enter)="onSubmit()" /&gt;
+
+&lt;!-- Ctrl + S --&gt;
+&lt;input (keydown.control.s)="onSave()" /&gt;
+
+&lt;!-- Escape --&gt;
+&lt;input (keydown.escape)="onCancel()" /&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Two-way binding [( )]</h2>
+            <pre><code class="language-typescript">import { FormsModule } from '@angular/forms';
+
+@Component({
+  imports: [FormsModule],
+  template: `
+    &lt;input [(ngModel)]="name" /&gt;
+    &lt;p&gt;Bonjour {{ name }}&lt;/p&gt;
+  `
+})
+export class AppComponent {
+  name = '';
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>FormsModule requis</h2>
+            <pre><code class="language-typescript">import { FormsModule } from '@angular/forms';
+
+@Component({
+  imports: [FormsModule],  // Obligatoire !
+  // ...
+})</code></pre>
+            <p>Sans FormsModule, <code>ngModel</code> ne fonctionne pas</p>
+          </section>
+
+          <section>
+            <h2>Recap Binding</h2>
+            <table>
+              <tr><th>Syntaxe</th><th>Exemple</th></tr>
+              <tr><td>{{ }}</td><td>{{ title }}</td></tr>
+              <tr><td>[ ]</td><td>[disabled]="isOff"</td></tr>
+              <tr><td>( )</td><td>(click)="save()"</td></tr>
+              <tr><td>[( )]</td><td>[(ngModel)]="val"</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Exercice 03 - Data Binding</h2>
+            <ol>
+              <li>Enrichir <code>PokemonCardComponent</code></li>
+              <li>Afficher nom, id et types avec <code>{{ }}</code></li>
+              <li>Lier l'image avec <code>[src]</code></li>
+              <li>Ajouter un bouton favori avec <code>(click)</code></li>
+              <li>Input de recherche avec <code>[(ngModel)]</code></li>
+            </ol>
+            <p><strong>25 minutes</strong></p>
+          </section>
+
+          <section>
+            <h1>SIGNALS</h1>
+            <p>Réactivité nouvelle génération</p>
+          </section>
+
+          <section>
+            <h2>Pourquoi Signals ?</h2>
+            <p><strong>Problème Zone.js :</strong></p>
+            <ul>
+              <li>Vérifie TOUT à chaque événement</li>
+              <li>Performance dégradée</li>
+              <li>Comportement imprévisible</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Solution Signals</h2>
+            <ul>
+              <li>Réactivité <strong>précise</strong></li>
+              <li>Mise à jour <strong>ciblée</strong></li>
+              <li>Code <strong>explicite</strong></li>
+              <li>Meilleure <strong>performance</strong></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>signal() - Créer un signal</h2>
+            <pre><code class="language-typescript">import { signal } from '@angular/core';
+
+// Signal simple
+count = signal(0);
+
+// Signal type
+name = signal&lt;string&gt;('Angular');
+
+// Signal avec objet
+user = signal({ name: 'John', age: 30 });</code></pre>
+          </section>
+
+          <section>
+            <h2>Lire un signal</h2>
+            <pre><code class="language-typescript">count = signal(5);
+
+// Dans la classe
+console.log(this.count()); // 5</code></pre>
+            <pre><code class="language-html">&lt;!-- Dans le template --&gt;
+&lt;p&gt;{{ count() }}&lt;/p&gt;</code></pre>
+            <p><strong>Toujours avec ()</strong></p>
+          </section>
+
+          <section>
+            <h2>Modifier - set()</h2>
+            <pre><code class="language-typescript">count = signal(0);
+
+// Remplacer la valeur
+this.count.set(10);
+
+// Reinitialiser
+this.count.set(0);</code></pre>
+          </section>
+
+          <section>
+            <h2>Modifier - update()</h2>
+            <pre><code class="language-typescript">count = signal(0);
+
+// Incrementer
+this.count.update(n =&gt; n + 1);
+
+// Decrementer
+this.count.update(n =&gt; n - 1);
+
+// Doubler
+this.count.update(n =&gt; n * 2);</code></pre>
+          </section>
+
+          <section>
+            <h2>computed() - Valeurs dérivées</h2>
+            <pre><code class="language-typescript">import { signal, computed } from '@angular/core';
+
+firstName = signal('John');
+lastName = signal('Doe');
+
+// Valeur calculée automatiquement
+fullName = computed(() =&gt;
+  `${this.firstName()} ${this.lastName()}`
+);</code></pre>
+          </section>
+
+          <section>
+            <h2>computed() est en lecture seule</h2>
+            <pre><code class="language-typescript">count = signal(5);
+double = computed(() =&gt; this.count() * 2);
+
+// Lecture OK
+console.log(this.double()); // 10
+
+// ERREUR - pas de set() ! - 
+this.double.set(20); // TypeError</code></pre>
+          </section>
+
+          <section>
+            <h2>effect() - Side effects</h2>
+            <pre><code class="language-typescript">import { signal, effect } from '@angular/core';
+
+count = signal(0);
+
+constructor() {
+  effect(() =&gt; {
+    console.log('Count:', this.count());
+  });
+}</code></pre>
+            <p>S'exécute à chaque changement de count</p>
+          </section>
+
+          <section>
+            <h2>effect() - Cas d'utilisation</h2>
+            <ul>
+              <li>Synchronisation <strong>localStorage</strong></li>
+              <li><strong>Logging</strong> / analytics</li>
+              <li>Appels <strong>API</strong> déclenchés</li>
+              <li>Mise a jour du <strong>DOM</strong> manuel</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Exemple Counter complet</h2>
+            <pre><code class="language-typescript">@Component({
+  template: `
+    &lt;p&gt;Count: {{ count() }}&lt;/p&gt;
+    &lt;p&gt;Double: {{ double() }}&lt;/p&gt;
+    &lt;button (click)="increment()"&gt;+&lt;/button&gt;
+  `
+})
+export class CounterComponent {
+  count = signal(0);
+  double = computed(() =&gt; this.count() * 2);
+
+  increment() { this.count.update(n =&gt; n + 1); }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Signals + Objets</h2>
+            <pre><code class="language-typescript">user = signal({ name: 'John', age: 30 });
+
+// Mise a jour immutable
+updateAge(newAge: number) {
+  this.user.update(u =&gt; ({
+    ...u,
+    age: newAge
+  }));
+}</code></pre>
+            <p><strong>Toujours créer un nouvel objet</strong></p>
+          </section>
+
+          <section>
+            <h2>Signals + Arrays</h2>
+            <pre><code class="language-typescript">items = signal&lt;string[]&gt;([]);
+
+addItem(item: string) {
+  this.items.update(arr =&gt; [...arr, item]);
+}
+
+removeItem(index: number) {
+  this.items.update(arr =&gt;
+    arr.filter((_, i) =&gt; i !== index)
+  );
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Exercice 04 - Signals</h2>
+            <p><strong>Partie 1 - Counter (10 min):</strong></p>
+            <ol>
+              <li>Créer <code>CounterComponent</code></li>
+              <li>Signal <code>count</code>, computed <code>isEven</code></li>
+              <li>Boutons +, -, Reset avec effect()</li>
+            </ol>
+            <p><strong>Partie 2 - FavoritesCounter (15 min):</strong></p>
+            <ol>
+              <li>Créer <code>FavoritesCounterComponent</code></li>
+              <li>Signal <code>favorites</code> (array), computed
+                <code>count</code></li>
+              <li>Méthodes add/remove avec affichage conditionnel</li>
+            </ol>
+            <p><strong>25 minutes</strong></p>
+          </section>
+
+          <section>
+            <h2>Résumé Binding</h2>
+            <ul>
+              <li><code>{{ }}</code> interpolation</li>
+              <li><code>[ ]</code> property binding</li>
+              <li><code>( )</code> event binding</li>
+              <li><code>[( )]</code> two-way binding</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Résumé Signals</h2>
+            <ul>
+              <li><code>signal()</code> valeur réactive</li>
+              <li><code>set()</code> / <code>update()</code> modifier</li>
+              <li><code>computed()</code> valeur dérivée</li>
+              <li><code>effect()</code> effets secondaires</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- COLUMN 5: CONTROL FLOW (21 slides) -->
+        <!-- ============================================ -->
+        <section>
+          <section>
+            <h1>Control Flow</h1>
+            <p>@if, @for, @switch</p>
+          </section>
+
+          <section>
+            <h2>Objectifs</h2>
+            <ul>
+              <li>Maîtriser @if pour les conditions</li>
+              <li>Utiliser @for pour les boucles</li>
+              <li>Appliquer @switch pour les cas multiples</li>
+              <li>Gérer les listes vides avec @empty</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Nouveau vs Ancien</h2>
+            <table>
+              <tr><th>Ancien</th><th>Nouveau (v17+)</th></tr>
+              <tr><td>*ngIf</td><td>@if</td></tr>
+              <tr><td>*ngFor</td><td>@for</td></tr>
+              <tr><td>*ngSwitch</td><td>@switch</td></tr>
+            </table>
+            <p>Nouveau = <strong>built-in</strong>, pas d'import</p>
+          </section>
+
+          <section>
+            <h2>Pourquoi changer ?</h2>
+            <ul>
+              <li>Syntaxe plus <strong>lisible</strong></li>
+              <li><strong>Pas d'import</strong> requis</li>
+              <li>Meilleure <strong>performance</strong></li>
+              <li><strong>Type inference</strong> amélioré</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>@if - Syntaxe simple</h2>
+            <pre><code class="language-html">@if (isLoggedIn) {
+  &lt;p&gt;Bienvenue !&lt;/p&gt;
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>@if @else</h2>
+            <pre><code class="language-html">@if (isLoggedIn) {
+  &lt;p&gt;Bienvenue {{ userName }}&lt;/p&gt;
+} @else {
+  &lt;p&gt;Veuillez vous connecter&lt;/p&gt;
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>@if @else if @else</h2>
+            <pre><code class="language-html">@if (status === 'loading') {
+  &lt;p&gt;Chargement...&lt;/p&gt;
+} @else if (status === 'error') {
+  &lt;p&gt;Erreur !&lt;/p&gt;
+} @else {
+  &lt;p&gt;Donnees chargees&lt;/p&gt;
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>@if avec ;as</h2>
+            <pre><code class="language-html">@if (user$ | async; as user) {
+  &lt;p&gt;{{ user.name }}&lt;/p&gt;
+}</code></pre>
+            <p>Crée une variable locale <code>user</code></p>
+          </section>
+
+          <section>
+            <h2>@if ;as - Exemple</h2>
+            <pre><code class="language-html">@if (getUserById(id); as user) {
+  &lt;div class="profile"&gt;
+    &lt;h2&gt;{{ user.name }}&lt;/h2&gt;
+    &lt;p&gt;{{ user.email }}&lt;/p&gt;
+  &lt;/div&gt;
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>@for - Syntaxe</h2>
+            <pre><code class="language-html">@for (item of items; track item.id) {
+  &lt;div&gt;{{ item.name }}&lt;/div&gt;
+}</code></pre>
+            <p><strong>track</strong> est obligatoire !</p>
+          </section>
+
+          <section>
+            <h2>track - Pourquoi ?</h2>
+            <ul>
+              <li>Optimise les mises à jour DOM</li>
+              <li>Identifie chaque élément unique</li>
+              <li>Évite les re-renders inutiles</li>
+            </ul>
+            <p><strong>Obligatoire</strong> depuis Angular 17</p>
+          </section>
+
+          <section>
+            <h2>Choisir track</h2>
+            <table>
+              <tr><th>Données</th><th>track</th></tr>
+              <tr><td>Objets avec ID</td><td>track item.id</td></tr>
+              <tr><td>Primitives</td><td>track $index</td></tr>
+              <tr><td>Objets uniques</td><td>track item</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Variables contextuelles</h2>
+            <table>
+              <tr><th>Variable</th><th>Type</th></tr>
+              <tr><td>$index</td><td>number</td></tr>
+              <tr><td>$first</td><td>boolean</td></tr>
+              <tr><td>$last</td><td>boolean</td></tr>
+              <tr><td>$even</td><td>boolean</td></tr>
+              <tr><td>$odd</td><td>boolean</td></tr>
+              <tr><td>$count</td><td>number</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Variables - Exemple</h2>
+            <pre><code class="language-html">@for (pokemon of pokemons; track pokemon.id) {
+  &lt;div [class.first]="$first"
+       [class.odd]="$odd"&gt;
+    #{{ pokemon.id }}. {{ pokemon.name }}
+  &lt;/div&gt;
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>@empty - Liste vide</h2>
+            <pre><code class="language-html">@for (pokemon of pokemons; track pokemon.id) {
+  &lt;app-pokemon-card [pokemon]="pokemon" /&gt;
+} @empty {
+  &lt;p&gt;Aucun Pokémon trouvé&lt;/p&gt;
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>@empty - Exemple complet</h2>
+            <pre><code class="language-html">@for (pokemon of filteredPokemons(); track pokemon.id) {
+  &lt;app-pokemon-card [pokemon]="pokemon" /&gt;
+} @empty {
+  &lt;div class="empty-state"&gt;
+    &lt;p&gt;Aucun Pokémon trouvé&lt;/p&gt;
+    &lt;button&gt;Réinitialiser filtres&lt;/button&gt;
+  &lt;/div&gt;
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>@switch - Syntaxe</h2>
+            <pre><code class="language-html">@switch (pokemon.type) {
+  @case ('fire') {
+    &lt;span class="badge red"&gt;Feu&lt;/span&gt;
+  }
+  @case ('water') {
+    &lt;span class="badge blue"&gt;Eau&lt;/span&gt;
+  }
+  @default {
+    &lt;span class="badge gray"&gt;Normal&lt;/span&gt;
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>@switch - Avantages</h2>
+            <ul>
+              <li>Plus lisible que multiples @if</li>
+              <li>Une seule évaluation de l'expression</li>
+              <li>@default pour le cas par défaut</li>
+              <li>Pas de fall-through</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Migration automatique</h2>
+            <pre><code class="language-bash"># Migrer vers le nouveau control flow
+ng generate @angular/core:control-flow</code></pre>
+            <p>Convertit *ngIf, *ngFor, *ngSwitch</p>
+          </section>
+
+          <section>
+            <h2>Exercice 05 - Control Flow</h2>
+            <ol>
+              <li>Créer <code>PokemonListComponent</code></li>
+              <li>Grille avec <code>@for</code> et <code>track</code></li>
+              <li>Message <code>@empty</code> si liste vide</li>
+              <li>Badge type avec <code>@switch</code></li>
+              <li>Variables contextuelles ($index, $first, $last)</li>
+              <li>Afficher/masquer détails avec <code>@if</code></li>
+            </ol>
+            <p><strong>25 minutes</strong></p>
+          </section>
+
+          <section>
+            <h2>Résumé</h2>
+            <ul>
+              <li><code>@if</code> conditions</li>
+              <li><code>@for</code> + <code>track</code> boucles</li>
+              <li><code>@empty</code> liste vide</li>
+              <li><code>@switch</code> cas multiples</li>
+              <li>Built-in, pas d'import !</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- COLUMN 6: SERVICES & DI (23 slides) -->
+        <!-- ============================================ -->
+        <section>
+          <section>
+            <h1>Services &amp; DI</h1>
+            <p>Injection de dependances</p>
+          </section>
+
+          <section>
+            <h2>Objectifs</h2>
+            <ul>
+              <li>Comprendre le rôle des services</li>
+              <li>Créer et injecter des services</li>
+              <li>Utiliser inject() moderne</li>
+              <li>Gérer l'état avec Signals</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Qu'est-ce qu'un service ?</h2>
+            <pre><code>+----------------------------------+
+|            SERVICE               |
++----------------------------------+
+|  - Logique metier                |
+|  - Accès aux données             |
+|  - Etat partage                  |
+|  - Communication API             |
++----------------------------------+</code></pre>
+          </section>
+
+          <section>
+            <h2>Pourquoi des services ?</h2>
+            <table>
+              <tr><th>Sans service</th><th>Avec service</th></tr>
+              <tr><td>Logique dans composants</td><td>Logique
+                  centralisée</td></tr>
+              <tr><td>Code dupliqué</td><td>Code réutilisable</td></tr>
+              <tr><td>Tests difficiles</td><td>Tests simples</td></tr>
+              <tr><td>Couplage fort</td><td>Couplage faible</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Créer un service</h2>
+            <pre><code class="language-bash">ng generate service pokemon
+
+# ou raccourci
+ng g s pokemon</code></pre>
+            <p>Crée <code>pokemon.service.ts</code></p>
+          </section>
+
+          <section>
+            <h2>Structure d'un service</h2>
+            <pre><code class="language-typescript">import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class PokemonService {
+  // Méthodes et propriétés
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>providedIn: 'root'</h2>
+            <ul>
+              <li>Service disponible <strong>partout</strong></li>
+              <li>Instance <strong>singleton</strong></li>
+              <li><strong>Tree-shakable</strong> si non utilisé</li>
+              <li>Recommandé par défaut</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>inject() - Méthode moderne</h2>
+            <pre><code class="language-typescript">import { inject } from '@angular/core';
+import { PokemonService } from './pokemon.service';
+
+@Component({ /* ... */ })
+export class PokemonListComponent {
+  private pokemonService = inject(PokemonService);
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>inject() vs constructor</h2>
+            <pre><code class="language-typescript">// Moderne (recommandé)
+pokemonService = inject(PokemonService);
+
+// Ancien (fonctionne encore)
+constructor(private pokemonService: PokemonService) {}</code></pre>
+          </section>
+
+          <section>
+            <h2>Avantages inject()</h2>
+            <table>
+              <tr><th>inject()</th><th>constructor</th></tr>
+              <tr><td>Fonctionne hors classe</td><td>Classe uniquement</td></tr>
+              <tr><td>Moins de boilerplate</td><td>Verbeux</td></tr>
+              <tr><td>Héritage simple</td><td>super() requis</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Service + Signals</h2>
+            <pre><code class="language-typescript">@Injectable({ providedIn: 'root' })
+export class PokemonService {
+  private pokemons = signal&lt;Pokemon[]&gt;([]);
+  private favorites = signal&lt;number[]&gt;([]);
+
+  readonly allPokemons = this.pokemons.asReadonly();
+  readonly favoritePokemons = computed(() =&gt;
+    this.pokemons().filter(p =&gt; this.favorites().includes(p.id))
+  );
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>toggleFavorite</h2>
+            <pre><code class="language-typescript">toggleFavorite(id: number) {
+  this.favorites.update(favs =&gt; {
+    if (favs.includes(id)) {
+      return favs.filter(f =&gt; f !== id);
+    }
+    return [...favs, id];
+  });
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>isFavorite - computed</h2>
+            <pre><code class="language-typescript">// Dans le composant
+isFavorite = computed(() =&gt;
+  this.pokemonService.favorites().includes(this.pokemon().id)
+);</code></pre>
+          </section>
+
+          <section>
+            <h2>loadPokemons</h2>
+            <pre><code class="language-typescript">loadPokemons() {
+  // Appel API PokeAPI
+  this.http.get&lt;PokemonListResponse&gt;(
+    'https://pokeapi.co/api/v2/pokemon?limit=151'
+  ).subscribe(response =&gt; {
+    this.pokemons.set(response.results);
+  });
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Utiliser dans un composant</h2>
+            <pre><code class="language-typescript">@Component({
+  template: `
+    @for (pokemon of pokemonService.allPokemons();
+          track pokemon.id) {
+      &lt;app-pokemon-card [pokemon]="pokemon" /&gt;
+    }
+  `
+})
+export class PokemonListComponent {
+  pokemonService = inject(PokemonService);
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Interface Pokemon</h2>
+            <pre><code class="language-typescript">// pokemon.model.ts
+export interface Pokemon {
+  id: number;
+  name: string;
+  types: PokemonType[];
+  sprites: { front_default: string };
+  stats: PokemonStat[];
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Hiérarchie des injecteurs</h2>
+            <pre><code>+-----------------------------+
+|      Root Injector          |  providedIn: 'root'
++-----------------------------+
+|   Component Injector 1      |  providers: [...]
+|   Component Injector 2      |
++-----------------------------+</code></pre>
+            <p>Injection du plus proche au plus haut</p>
+          </section>
+
+          <section>
+            <h2>Provider au niveau composant</h2>
+            <pre><code class="language-typescript">@Component({
+  providers: [PokemonService],
+  // ...
+})
+export class PokemonListComponent { }</code></pre>
+            <p>Nouvelle instance pour ce composant</p>
+          </section>
+
+          <section>
+            <h2>Notification Service</h2>
+            <pre><code class="language-typescript">@Injectable({ providedIn: 'root' })
+export class NotificationService {
+  private messages = signal&lt;string[]&gt;([]);
+  readonly all = this.messages.asReadonly();
+
+  show(message: string) {
+    this.messages.update(m =&gt; [...m, message]);
+    setTimeout(() =&gt; this.remove(0), 3000);
+  }
+
+  remove(index: number) {
+    this.messages.update(m =&gt;
+      m.filter((_, i) =&gt; i !== index));
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Afficher les notifications</h2>
+            <pre><code class="language-html">&lt;div class="notifications"&gt;
+  @for (msg of notifService.all();
+        track $index) {
+    &lt;div class="toast"&gt;
+      {{ msg }}
+      &lt;button (click)="notifService.remove($index)"&gt;
+        &amp;times;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  }
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Bonnes pratiques</h2>
+            <table>
+              <tr><th>Do</th><th>Don't</th></tr>
+              <tr><td>providedIn: 'root'</td><td>Providers partout</td></tr>
+              <tr><td>inject()</td><td>constructor DI</td></tr>
+              <tr><td>Signals pour l'etat</td><td>BehaviorSubject</td></tr>
+              <tr><td>asReadonly()</td><td>Exposer le signal</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Exercice 06 - Services</h2>
+            <ol>
+              <li>Créer interface <code>Pokemon</code> dans models/</li>
+              <li>Créer <code>PokemonService</code> avec données mock</li>
+              <li>Signal <code>pokemons</code> et <code>favorites</code></li>
+              <li>Méthodes: toggleFavorite, isFavorite, getFavorites</li>
+              <li>Computed: favoriteCount, favoritePokemons</li>
+              <li>Injecter et utiliser dans les composants</li>
+            </ol>
+            <p><strong>30 minutes</strong></p>
+          </section>
+
+          <section>
+            <h2>Résumé</h2>
+            <ul>
+              <li>Service = logique partagée</li>
+              <li><code>@Injectable</code> + <code>providedIn</code></li>
+              <li><code>inject()</code> pour l'injection</li>
+              <li>Signals pour l'état réactif</li>
+              <li><code>asReadonly()</code> pour l'encapsulation</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- JOUR 2 - TRANSITION -->
+        <!-- ============================================ -->
+        <section>
+          <section>
+            <h1>Jour 2</h1>
+            <h2>Approfondissement</h2>
+            <p>Communication, Pipes, Directives, HttpClient, Formulaires</p>
+          </section>
+
+          <section>
+            <h2>Programme - Jour 2</h2>
+            <ul>
+              <li>Communication entre composants</li>
+              <li>Pipes (built-in et custom)</li>
+              <li>Directives</li>
+              <li>HttpClient &amp; API REST</li>
+              <li>Formulaires réactifs</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- COLUMN 7: COMMUNICATION (Module 6) -->
+        <!-- ============================================ -->
+        <section>
+          <section>
+            <h1>Communication entre Composants</h1>
+            <p>input(), output(), model()</p>
+          </section>
+
+          <section>
+            <h2>Objectifs</h2>
+            <ul>
+              <li>Maîtriser <code>input()</code> et <code>output()</code> (API
+                moderne)</li>
+              <li>Comprendre les patterns de communication</li>
+              <li>Utiliser <code>model()</code> pour le two-way binding</li>
+              <li>Implémenter la content projection</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Patterns de communication</h2>
+            <pre><code>
+┌─────────────────────────────────────────────────────┐
+│              Parent Component                        │
+└──────────┬──────────────────┬─────────────┘         │
+           │                  │                        │
+  input()  │                  │  output()              │
+    ↓      ▼                  ▼      ↑                 │
+┌──────────────────────────────────────────┐          │
+│              Child Component              │          │
+└───────────────────────────────────────────┘         │
+                                                       │
+           OU via Service partagé                      │
+└─────────────────────────────────────────────────────┘
+            </code></pre>
+          </section>
+
+          <section>
+            <h2>3 façons de communiquer</h2>
+            <table>
+              <tr><th>Pattern</th><th>Direction</th><th>Cas d'usage</th></tr>
+              <tr><td><code>input()</code></td><td>Parent →
+                  Enfant</td><td>Passer des données</td></tr>
+              <tr><td><code>output()</code></td><td>Enfant →
+                  Parent</td><td>Émettre des événements</td></tr>
+              <tr><td>Service</td><td>Bidirectionnel</td><td>État partagé
+                  global</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>input() - Recevoir des données</h2>
+            <pre><code class="language-typescript">import { Component, input } from '@angular/core';
+
+@Component({
+  selector: 'app-pokemon-card',
+  template: `
+    &lt;div class="card"&gt;
+      &lt;h3&gt;{{ name() }}&lt;/h3&gt;
+    &lt;/div&gt;
+  `
+})
+export class PokemonCard {
+  // input() retourne un signal
+  name = input&lt;string&gt;();
+}</code></pre>
+            <pre><code class="language-html">&lt;!-- Utilisation par le parent --&gt;
+&lt;app-pokemon-card [name]="'Pikachu'" /&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>input() avec valeur par défaut</h2>
+            <pre><code class="language-typescript">@Component({
+  selector: 'app-pokemon-card',
+  template: `
+    &lt;div class="card" [class.expanded]="showDetails()"&gt;
+      &lt;h3&gt;{{ pokemon().name }}&lt;/h3&gt;
+      @if (showDetails()) {
+        &lt;p&gt;{{ pokemon().description }}&lt;/p&gt;
+      }
+    &lt;/div&gt;
+  `
+})
+export class PokemonCard {
+  pokemon = input.required&lt;Pokemon&gt;(); // Obligatoire
+  showDetails = input(false);           // Optionnel avec défaut
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>input.required&lt;T&gt;()</h2>
+            <pre><code class="language-typescript">export class PokemonCard {
+  // Angular vérifie à la compilation
+  pokemon = input.required&lt;Pokemon&gt;();
+}</code></pre>
+            <pre><code class="language-html">&lt;!-- ✅ Correct --&gt;
+&lt;app-pokemon-card [pokemon]="currentPokemon" /&gt;
+
+&lt;!-- ❌ Erreur de compilation --&gt;
+&lt;app-pokemon-card /&gt;
+&lt;!-- Property 'pokemon' is required --&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>input() vs @Input() (ancien)</h2>
+            <p><strong>Nouvelle API (recommandée)</strong></p>
+            <pre><code class="language-typescript">// ✅ input() - retourne un signal
+pokemon = input.required&lt;Pokemon&gt;();
+showDetails = input(false);
+
+// Dans le template : {{ pokemon().name }}</code></pre>
+            <p><strong>Ancienne API (toujours valide)</strong></p>
+            <pre><code class="language-typescript">// @Input() decorator
+@Input({ required: true }) pokemon!: Pokemon;
+@Input() showDetails = false;
+
+// Dans le template : {{ pokemon.name }}</code></pre>
+          </section>
+
+          <section>
+            <h2>Input transforms</h2>
+            <pre><code class="language-typescript">import { booleanAttribute, numberAttribute } from '@angular/core';
+
+@Component({
+  selector: 'app-pokemon-card'
+})
+export class PokemonCard {
+  // Convertit string "true"/"false" en boolean
+  disabled = input(false, { transform: booleanAttribute });
+
+  // Convertit string "5" en number 5
+  priority = input(1, { transform: numberAttribute });
+}</code></pre>
+            <pre><code class="language-html">&lt;!-- disabled sera true (boolean) --&gt;
+&lt;app-pokemon-card disabled /&gt;
+
+&lt;!-- priority sera 3 (number) --&gt;
+&lt;app-pokemon-card priority="3" /&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>output() - Émettre des événements</h2>
+            <pre><code class="language-typescript">import { Component, output } from '@angular/core';
+
+@Component({
+  selector: 'app-pokemon-card',
+  template: `
+    &lt;div class="card"&gt;
+      &lt;h3&gt;{{ pokemon().name }}&lt;/h3&gt;
+      &lt;button (click)="onFavorite()"&gt;♥&lt;/button&gt;
+    &lt;/div&gt;
+  `
+})
+export class PokemonCard {
+  pokemon = input.required&lt;Pokemon&gt;();
+  favorite = output&lt;number&gt;(); // Émet un number (pokemon id)
+
+  onFavorite() {
+    this.favorite.emit(this.pokemon().id);
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Écouter un output</h2>
+            <pre><code class="language-typescript">@Component({
+  selector: 'app-pokemon-list',
+  template: `
+    @for (pokemon of pokemons(); track pokemon.id) {
+      &lt;app-pokemon-card
+        [pokemon]="pokemon"
+        (favorite)="handleFavorite($event)" /&gt;
+    }
+  `
+})
+export class PokemonList {
+  pokemons = signal&lt;Pokemon[]&gt;([...]);
+
+  handleFavorite(pokemonId: number) {
+    this.pokemonService.toggleFavorite(pokemonId);
+  }
+}</code></pre>
+            <p><code>$event</code> contient la valeur émise.</p>
+          </section>
+
+          <section>
+            <h2>output() vs @Output() (ancien)</h2>
+            <p><strong>Nouvelle API (recommandée)</strong></p>
+            <pre><code class="language-typescript">// ✅ output() - plus simple
+favorite = output&lt;number&gt;();
+toggle = output&lt;void&gt;();
+
+// Émettre
+this.favorite.emit(pokemonId);
+this.toggle.emit();</code></pre>
+            <p><strong>Ancienne API (toujours valide)</strong></p>
+            <pre><code class="language-typescript">// @Output() avec EventEmitter
+@Output() favorite = new EventEmitter&lt;number&gt;();
+@Output() toggle = new EventEmitter&lt;void&gt;();</code></pre>
+          </section>
+
+          <section>
+            <h2>Exemple complet : PokemonCard</h2>
+            <pre><code class="language-typescript">@Component({
+  selector: 'app-pokemon-card',
+  template: `
+    &lt;div class="card" [class.favorite]="isFav()"&gt;
+      &lt;img [src]="pokemon().sprite" /&gt;
+      &lt;span class="name"&gt;{{ pokemon().name }}&lt;/span&gt;
+
+      &lt;div class="actions"&gt;
+        &lt;button (click)="favorite.emit(pokemon().id)"&gt;♥&lt;/button&gt;
+        &lt;button (click)="select.emit(pokemon())"&gt;Détails&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  `
+})
+export class PokemonCard {
+  pokemon = input.required&lt;Pokemon&gt;();
+  isFav = input(false);
+
+  favorite = output&lt;number&gt;();
+  select = output&lt;Pokemon&gt;();
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>model() - Two-way binding</h2>
+            <pre><code class="language-typescript">import { Component, model } from '@angular/core';
+
+@Component({
+  selector: 'app-toggle',
+  template: `
+    &lt;button (click)="toggle()"&gt;
+      {{ checked() ? 'ON' : 'OFF' }}
+    &lt;/button&gt;
+  `
+})
+export class Toggle {
+  // model() = input + output combinés
+  checked = model(false);
+
+  toggle() {
+    this.checked.update(v =&gt; !v);
+  }
+}</code></pre>
+            <pre><code class="language-html">&lt;!-- Le parent peut binder en two-way --&gt;
+&lt;app-toggle [(checked)]="isEnabled" /&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>model() - Comment ça marche ?</h2>
+            <pre><code class="language-typescript">// Dans le composant enfant
+checked = model(false);
+
+// Équivalent à :
+// - input signal pour recevoir
+// - output pour émettre les changements
+
+// La modification dans l'enfant se propage au parent
+this.checked.set(true);</code></pre>
+            <pre><code class="language-html">&lt;!-- Dans le parent --&gt;
+&lt;app-toggle [(checked)]="myValue" /&gt;
+
+&lt;!-- Équivalent à : --&gt;
+&lt;app-toggle
+  [checked]="myValue"
+  (checkedChange)="myValue = $event" /&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Content Projection</h2>
+            <pre><code class="language-typescript">// card.component.ts
+@Component({
+  selector: 'app-card',
+  template: `
+    &lt;div class="card"&gt;
+      &lt;ng-content&gt;&lt;/ng-content&gt;
+    &lt;/div&gt;
+  `
+})
+export class Card { }</code></pre>
+            <pre><code class="language-html">&lt;!-- Utilisation --&gt;
+&lt;app-card&gt;
+  &lt;h2&gt;Mon titre&lt;/h2&gt;
+  &lt;p&gt;Mon contenu personnalisé&lt;/p&gt;
+&lt;/app-card&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Multi-slot projection</h2>
+            <pre><code class="language-typescript">@Component({
+  selector: 'app-card',
+  template: `
+    &lt;div class="card"&gt;
+      &lt;header&gt;
+        &lt;ng-content select="[card-header]"&gt;&lt;/ng-content&gt;
+      &lt;/header&gt;
+      &lt;main&gt;
+        &lt;ng-content&gt;&lt;/ng-content&gt;
+      &lt;/main&gt;
+      &lt;footer&gt;
+        &lt;ng-content select="[card-footer]"&gt;&lt;/ng-content&gt;
+      &lt;/footer&gt;
+    &lt;/div&gt;
+  `
+})</code></pre>
+          </section>
+
+          <section>
+            <h2>Utilisation multi-slot</h2>
+            <pre><code class="language-html">&lt;app-card&gt;
+  &lt;!-- Va dans card-header --&gt;
+  &lt;h2 card-header&gt;Titre de la carte&lt;/h2&gt;
+
+  &lt;!-- Va dans le slot par défaut --&gt;
+  &lt;p&gt;Contenu principal de la carte.&lt;/p&gt;
+
+  &lt;!-- Va dans card-footer --&gt;
+  &lt;button card-footer&gt;Action&lt;/button&gt;
+&lt;/app-card&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Communication via Service</h2>
+            <pre><code class="language-typescript">// notification.service.ts
+@Injectable({ providedIn: 'root' })
+export class NotificationService {
+  private messageSignal = signal&lt;string | null&gt;(null);
+  readonly message = this.messageSignal.asReadonly();
+
+  show(message: string) {
+    this.messageSignal.set(message);
+  }
+
+  clear() {
+    this.messageSignal.set(null);
+  }
+}</code></pre>
+            <pre><code class="language-typescript">// Composant A : émet
+this.notificationService.show('Pokémon ajouté !');
+
+// Composant B : écoute (n'importe où dans l'app)
+message = this.notificationService.message;</code></pre>
+          </section>
+
+          <section>
+            <h2>Quand utiliser quoi ?</h2>
+            <table>
+              <tr><th>Situation</th><th>Solution</th></tr>
+              <tr><td>Parent → Enfant
+                  direct</td><td><code>input()</code></td></tr>
+              <tr><td>Enfant → Parent
+                  direct</td><td><code>output()</code></td></tr>
+              <tr><td>Two-way sur
+                  composant</td><td><code>model()</code></td></tr>
+              <tr><td>Composants non liés</td><td>Service avec signals</td></tr>
+              <tr><td>HTML
+                  personnalisé</td><td><code>&lt;ng-content&gt;</code></td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Résumé des APIs</h2>
+            <pre><code class="language-typescript">// Recevoir des données (parent → enfant)
+pokemon = input&lt;Pokemon&gt;();              // Optionnel
+pokemon = input.required&lt;Pokemon&gt;();     // Obligatoire
+visible = input(true);                   // Avec défaut
+
+// Émettre des événements (enfant → parent)
+favorite = output&lt;number&gt;();
+save = output&lt;void&gt;();
+
+// Two-way binding
+checked = model(false);
+value = model.required&lt;number&gt;();</code></pre>
+          </section>
+
+          <section>
+            <h2>Exercice 07 - Communication</h2>
+            <ol>
+              <li>Créer <code>PokemonCard</code> avec
+                <code>input.required&lt;Pokemon&gt;()</code></li>
+              <li>Ajouter <code>output</code> pour favorite et select</li>
+              <li>Utiliser dans <code>PokemonList</code></li>
+              <li>Connecter au <code>PokemonService</code></li>
+            </ol>
+            <p><strong>25 minutes</strong></p>
+          </section>
+
+          <section>
+            <h2>Résumé</h2>
+            <ul>
+              <li><code>input()</code> / <code>input.required()</code> pour
+                recevoir</li>
+              <li><code>output()</code> pour émettre des événements</li>
+              <li><code>model()</code> pour le two-way binding</li>
+              <li><code>&lt;ng-content&gt;</code> pour la content
+                projection</li>
+              <li>Services pour composants non liés</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- COLUMN 8: PIPES (Module 7) -->
+        <!-- ============================================ -->
+        <section>
+          <section>
+            <h1>Pipes</h1>
+            <p>Transformation des données dans les templates</p>
+          </section>
+
+          <section>
+            <h2>Objectifs</h2>
+            <ul>
+              <li>Comprendre le rôle des pipes</li>
+              <li>Utiliser les pipes intégrés</li>
+              <li>Créer des pipes personnalisés</li>
+              <li>Combiner les pipes</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Qu'est-ce qu'un pipe ?</h2>
+            <pre><code class="language-html">&lt;!-- Sans pipe --&gt;
+&lt;p&gt;{{ createdAt }}&lt;/p&gt;
+&lt;!-- 2025-03-20T10:30:00.000Z --&gt;
+
+&lt;!-- Avec pipe --&gt;
+&lt;p&gt;{{ createdAt | date:'longDate' }}&lt;/p&gt;
+&lt;!-- 20 mars 2025 --&gt;</code></pre>
+            <p>Les pipes transforment l'affichage <strong>sans modifier</strong>
+              les données.</p>
+          </section>
+
+          <section>
+            <h2>Syntaxe</h2>
+            <pre><code class="language-html">&lt;!-- Pipe simple --&gt;
+{{ value | pipeName }}
+
+&lt;!-- Avec paramètre --&gt;
+{{ value | pipeName:param }}
+
+&lt;!-- Avec plusieurs paramètres --&gt;
+{{ value | pipeName:param1:param2 }}
+
+&lt;!-- Chaînage --&gt;
+{{ value | pipe1 | pipe2 | pipe3 }}</code></pre>
+          </section>
+
+          <section>
+            <h2>DatePipe</h2>
+            <pre><code class="language-typescript">import { DatePipe } from '@angular/common';
+
+@Component({
+  imports: [DatePipe],
+  template: `
+    &lt;!-- Formats prédéfinis --&gt;
+    {{ today | date }}              &lt;!-- Mar 20, 2025 --&gt;
+    {{ today | date:'short' }}      &lt;!-- 3/20/25, 10:30 AM --&gt;
+    {{ today | date:'medium' }}     &lt;!-- Mar 20, 2025, 10:30:00 AM --&gt;
+    {{ today | date:'long' }}       &lt;!-- March 20, 2025 at... --&gt;
+
+    &lt;!-- Format personnalisé --&gt;
+    {{ today | date:'dd/MM/yyyy' }} &lt;!-- 20/03/2025 --&gt;
+    {{ today | date:'HH:mm' }}      &lt;!-- 10:30 --&gt;
+  `
+})</code></pre>
+          </section>
+
+          <section>
+            <h2>DatePipe - Formats utiles</h2>
+            <table>
+              <tr><th>Format</th><th>Exemple</th></tr>
+              <tr><td><code>'shortDate'</code></td><td>3/20/25</td></tr>
+              <tr><td><code>'mediumDate'</code></td><td>Mar 20, 2025</td></tr>
+              <tr><td><code>'longDate'</code></td><td>March 20, 2025</td></tr>
+              <tr><td><code>'shortTime'</code></td><td>10:30 AM</td></tr>
+              <tr><td><code>'dd/MM/yyyy'</code></td><td>20/03/2025</td></tr>
+              <tr><td><code>'HH:mm:ss'</code></td><td>10:30:00</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Localisation des dates</h2>
+            <pre><code class="language-typescript">// app.config.ts
+import { LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+
+registerLocaleData(localeFr);
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    { provide: LOCALE_ID, useValue: 'fr-FR' }
+  ]
+};</code></pre>
+            <pre><code class="language-html">{{ today | date:'longDate' }}
+&lt;!-- 20 mars 2025 --&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Pipes Nombres et Monnaie</h2>
+            <pre><code class="language-typescript">import { DecimalPipe, PercentPipe, CurrencyPipe } from '@angular/common';
+
+@Component({
+  imports: [DecimalPipe, PercentPipe, CurrencyPipe],
+  template: `
+    &lt;!-- DecimalPipe --&gt;
+    {{ 3.14159 | number }}           &lt;!-- 3.142 --&gt;
+    {{ 3.14159 | number:'1.0-2' }}   &lt;!-- 3.14 --&gt;
+    {{ 1234.5 | number:'1.2-2' }}    &lt;!-- 1,234.50 --&gt;
+
+    &lt;!-- PercentPipe --&gt;
+    {{ 0.259 | percent }}            &lt;!-- 26% --&gt;
+    {{ 0.259 | percent:'1.1-1' }}    &lt;!-- 25.9% --&gt;
+
+    &lt;!-- CurrencyPipe --&gt;
+    {{ 99.99 | currency }}           &lt;!-- $99.99 --&gt;
+    {{ 99.99 | currency:'EUR' }}     &lt;!-- €99.99 --&gt;
+  `
+})</code></pre>
+          </section>
+
+          <section>
+            <h2>Pipes Texte</h2>
+            <pre><code class="language-typescript">import { UpperCasePipe, LowerCasePipe, TitleCasePipe } from '@angular/common';
+
+@Component({
+  imports: [UpperCasePipe, LowerCasePipe, TitleCasePipe],
+  template: `
+    {{ 'angular' | uppercase }}     &lt;!-- ANGULAR --&gt;
+    {{ 'ANGULAR' | lowercase }}     &lt;!-- angular --&gt;
+    {{ 'hello world' | titlecase }} &lt;!-- Hello World --&gt;
+  `
+})</code></pre>
+          </section>
+
+          <section>
+            <h2>SlicePipe</h2>
+            <pre><code class="language-typescript">import { SlicePipe } from '@angular/common';
+
+@Component({
+  imports: [SlicePipe],
+  template: `
+    &lt;!-- String --&gt;
+    {{ 'Angular' | slice:0:3 }}    &lt;!-- Ang --&gt;
+    {{ 'Angular' | slice:3 }}      &lt;!-- ular --&gt;
+
+    &lt;!-- Array --&gt;
+    @for (item of items | slice:0:5; track item) {
+      &lt;!-- Affiche les 5 premiers --&gt;
+    }
+  `
+})</code></pre>
+          </section>
+
+          <section>
+            <h2>JsonPipe (debugging)</h2>
+            <pre><code class="language-typescript">import { JsonPipe } from '@angular/common';
+
+@Component({
+  imports: [JsonPipe],
+  template: `
+    &lt;pre&gt;{{ pokemon() | json }}&lt;/pre&gt;
+    &lt;!--
+    {
+      "id": 25,
+      "name": "Pikachu",
+      "types": ["electric"]
+    }
+    --&gt;
+  `
+})</code></pre>
+            <p>Utile pour le <strong>debugging</strong> !</p>
+          </section>
+
+          <section>
+            <h2>AsyncPipe</h2>
+            <pre><code class="language-typescript">import { AsyncPipe } from '@angular/common';
+import { Observable } from 'rxjs';
+
+@Component({
+  imports: [AsyncPipe],
+  template: `
+    @if (pokemon$ | async; as pokemon) {
+      &lt;p&gt;{{ pokemon.name }}&lt;/p&gt;
+    }
+
+    @for (p of pokemons$ | async; track p.id) {
+      &lt;app-pokemon-card [pokemon]="p" /&gt;
+    }
+  `
+})
+export class Demo {
+  pokemon$: Observable&lt;Pokemon&gt;;
+  pokemons$: Observable&lt;Pokemon[]&gt;;
+}</code></pre>
+            <p>AsyncPipe gère automatiquement subscribe/unsubscribe.</p>
+          </section>
+
+          <section>
+            <h2>Chaînage de pipes</h2>
+            <pre><code class="language-html">{{ title | lowercase | titlecase }}
+&lt;!-- "HELLO WORLD" → "hello world" → "Hello World" --&gt;
+
+{{ price | currency:'EUR' | slice:0:10 }}
+
+{{ createdAt | date:'longDate' | uppercase }}
+&lt;!-- "20 mars 2025" → "20 MARS 2025" --&gt;</code></pre>
+            <p>L'ordre compte ! Les pipes s'exécutent de gauche à droite.</p>
+          </section>
+
+          <section>
+            <h2>Créer un pipe personnalisé</h2>
+            <pre><code class="language-bash">ng generate pipe pipes/truncate
+# ou
+ng g p pipes/truncate</code></pre>
+            <pre><code class="language-typescript">import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'truncate',
+  standalone: true
+})
+export class TruncatePipe implements PipeTransform {
+  transform(value: unknown, ...args: unknown[]): unknown {
+    return null;
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>TruncatePipe - Implémentation</h2>
+            <pre><code class="language-typescript">@Pipe({
+  name: 'truncate',
+  standalone: true
+})
+export class TruncatePipe implements PipeTransform {
+  transform(value: string | null, limit = 50, ellipsis = '...'): string {
+    if (!value) return '';
+    if (value.length &lt;= limit) return value;
+    return value.substring(0, limit) + ellipsis;
+  }
+}</code></pre>
+            <pre><code class="language-html">{{ description | truncate }}        &lt;!-- 50 caractères + ... --&gt;
+{{ description | truncate:100 }}    &lt;!-- 100 caractères + ... --&gt;
+{{ description | truncate:30:'→' }} &lt;!-- 30 caractères + → --&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Utiliser un pipe custom</h2>
+            <pre><code class="language-typescript">import { TruncatePipe } from '../pipes/truncate.pipe';
+
+@Component({
+  selector: 'app-pokemon-card',
+  imports: [TruncatePipe], // ← Import obligatoire
+  template: `
+    &lt;div class="card"&gt;
+      &lt;h3&gt;{{ pokemon().name | truncate:20 }}&lt;/h3&gt;
+      &lt;p&gt;{{ pokemon().description | truncate:100 }}&lt;/p&gt;
+    &lt;/div&gt;
+  `
+})
+export class PokemonCard { }</code></pre>
+          </section>
+
+          <section>
+            <h2>Pipe pour le statut</h2>
+            <pre><code class="language-typescript">@Pipe({ name: 'pokemonType', standalone: true })
+export class PokemonTypePipe implements PipeTransform {
+  private typeMap: Record&lt;string, string&gt; = {
+    'fire': 'Feu',
+    'water': 'Eau',
+    'grass': 'Plante',
+    'electric': 'Électrique',
+    'psychic': 'Psy'
+  };
+
+  transform(value: string): string {
+    return this.typeMap[value] ?? value;
+  }
+}</code></pre>
+            <pre><code class="language-html">&lt;span class="badge"&gt;{{ pokemon.type | pokemonType }}&lt;/span&gt;
+&lt;!-- "fire" → "Feu" --&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Alternative : computed()</h2>
+            <pre><code class="language-typescript">@Component({
+  template: `
+    &lt;input [(ngModel)]="searchTerm"&gt;
+
+    @for (pokemon of filteredPokemons(); track pokemon.id) {
+      &lt;app-pokemon-card [pokemon]="pokemon" /&gt;
+    }
+  `
+})
+export class PokemonList {
+  pokemons = inject(PokemonService).pokemons;
+  searchTerm = signal('');
+
+  // ✅ Meilleure performance avec computed
+  filteredPokemons = computed(() =&gt; {
+    const search = this.searchTerm().toLowerCase();
+    if (!search) return this.pokemons();
+    return this.pokemons().filter(p =&gt;
+      p.name.toLowerCase().includes(search)
+    );
+  });
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Récapitulatif pipes intégrés</h2>
+            <table>
+              <tr><th>Pipe</th><th>Usage</th></tr>
+              <tr><td><code>date</code></td><td>Formater les dates</td></tr>
+              <tr><td><code>number</code></td><td>Formater les nombres</td></tr>
+              <tr><td><code>currency</code></td><td>Formater les
+                  montants</td></tr>
+              <tr><td><code>percent</code></td><td>Formater les %</td></tr>
+              <tr><td><code>uppercase</code></td><td>MAJUSCULES</td></tr>
+              <tr><td><code>lowercase</code></td><td>minuscules</td></tr>
+              <tr><td><code>titlecase</code></td><td>Première Lettre
+                  Maj</td></tr>
+              <tr><td><code>json</code></td><td>Afficher en JSON</td></tr>
+              <tr><td><code>async</code></td><td>Observable → valeur</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Exercice 08 - Pipes</h2>
+            <ol>
+              <li>Créer <code>TruncatePipe</code> pour les descriptions</li>
+              <li>Créer <code>PokemonTypePipe</code> pour traduire les
+                types</li>
+              <li>Appliquer aux <code>PokemonCard</code></li>
+              <li>Utiliser <code>date</code> pipe pour les dates</li>
+            </ol>
+            <p><strong>20 minutes</strong></p>
+          </section>
+
+          <section>
+            <h2>Résumé</h2>
+            <ul>
+              <li>Pipes = transformations d'affichage</li>
+              <li>Pipes intégrés : <code>date</code>, <code>number</code>,
+                <code>currency</code>...</li>
+              <li>Chaînage : <code>{{ value | pipe1 | pipe2 }}</code></li>
+              <li>Pipes custom avec <code>ng g p</code></li>
+              <li>Pour filtres complexes, préférer <code>computed()</code></li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- COLUMN 9: DIRECTIVES (Module 8) -->
+        <!-- ============================================ -->
+        <section>
+          <section>
+            <h1>Directives</h1>
+            <p>[class], [style] et directives custom</p>
+          </section>
+
+          <section>
+            <h2>Objectifs</h2>
+            <ul>
+              <li>Comprendre les types de directives</li>
+              <li>Maîtriser les bindings <code>[class]</code> et
+                <code>[style]</code></li>
+              <li>Créer des directives d'attribut</li>
+              <li>Utiliser <code>ElementRef</code> et <code>inject()</code></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Types de directives</h2>
+            <table>
+              <tr><th>Type</th><th>Description</th><th>Exemple</th></tr>
+              <tr><td><strong>Composant</strong></td><td>Directive avec
+                  template</td><td><code>@Component</code></td></tr>
+              <tr><td><strong>Attribut</strong></td><td>Modifie
+                  apparence/comportement</td><td><code>[ngClass]</code>,
+                  custom</td></tr>
+              <tr><td><strong>Structurelle</strong></td><td>Modifie le
+                  DOM</td><td><code>@if</code>, <code>@for</code></td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>[class] binding - Recommandé</h2>
+            <pre><code class="language-html">&lt;!-- Une classe conditionnelle --&gt;
+&lt;div [class.active]="isActive"&gt;
+
+&lt;!-- Plusieurs classes --&gt;
+&lt;div
+  [class.active]="isActive"
+  [class.disabled]="isDisabled"
+  [class.highlighted]="isHighlighted"&gt;
+
+&lt;!-- Classe dynamique --&gt;
+&lt;div [class]="dynamicClass"&gt;</code></pre>
+            <p>Préférer <code>[class.x]</code> à ngClass pour la
+              performance.</p>
+          </section>
+
+          <section>
+            <h2>[class] vs ngClass</h2>
+            <p><strong>✅ Recommandé : [class] binding</strong></p>
+            <pre><code class="language-html">&lt;div
+  [class.active]="pokemon.isFavorite"
+  [class.rare]="pokemon.isRare"
+  [class.legendary]="pokemon.isLegendary"&gt;</code></pre>
+            <p><strong>Éviter : ngClass</strong></p>
+            <pre><code class="language-html">&lt;!-- Plus verbeux, moins performant --&gt;
+&lt;div [ngClass]="{
+  'active': pokemon.isFavorite,
+  'rare': pokemon.isRare
+}"&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>[style] binding - Recommandé</h2>
+            <pre><code class="language-html">&lt;!-- Style simple --&gt;
+&lt;div [style.color]="textColor"&gt;
+
+&lt;!-- Avec unité --&gt;
+&lt;div [style.width.px]="widthValue"&gt;
+&lt;div [style.height.%]="heightPercent"&gt;
+&lt;div [style.font-size.rem]="fontSize"&gt;
+
+&lt;!-- Plusieurs styles --&gt;
+&lt;div
+  [style.color]="color"
+  [style.background-color]="bgColor"
+  [style.padding.px]="padding"&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Exemple : PokemonCard avec styles</h2>
+            <pre><code class="language-typescript">@Component({
+  selector: 'app-pokemon-card',
+  template: `
+    &lt;div
+      class="card"
+      [class.favorite]="isFavorite()"
+      [class.legendary]="pokemon().isLegendary"
+      [style.border-left-color]="typeColor()"&gt;
+
+      &lt;span class="name"&gt;{{ pokemon().name }}&lt;/span&gt;
+      &lt;span
+        class="badge"
+        [class.fire]="pokemon().type === 'fire'"
+        [class.water]="pokemon().type === 'water'"&gt;
+        {{ pokemon().type }}
+      &lt;/span&gt;
+    &lt;/div&gt;
+  `
+})</code></pre>
+          </section>
+
+          <section>
+            <h2>typeColor avec computed</h2>
+            <pre><code class="language-typescript">export class PokemonCard {
+  pokemon = input.required&lt;Pokemon&gt;();
+
+  typeColor = computed(() =&gt; {
+    switch (this.pokemon().type) {
+      case 'fire': return '#f44336';
+      case 'water': return '#2196f3';
+      case 'grass': return '#4caf50';
+      case 'electric': return '#ffeb3b';
+      default: return '#9e9e9e';
+    }
+  });
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Créer une directive d'attribut</h2>
+            <pre><code class="language-bash">ng generate directive directives/highlight
+# ou
+ng g d directives/highlight</code></pre>
+            <pre><code class="language-typescript">import { Directive } from '@angular/core';
+
+@Directive({
+  selector: '[appHighlight]',
+  standalone: true
+})
+export class HighlightDirective {
+  constructor() { }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>HighlightDirective - Basique</h2>
+            <pre><code class="language-typescript">import { Directive, ElementRef, inject } from '@angular/core';
+
+@Directive({
+  selector: '[appHighlight]',
+  standalone: true
+})
+export class HighlightDirective {
+  private el = inject(ElementRef);
+
+  constructor() {
+    // Appliquer un style à l'élément hôte
+    this.el.nativeElement.style.backgroundColor = 'yellow';
+  }
+}</code></pre>
+            <pre><code class="language-html">&lt;p appHighlight&gt;Ce texte est surligné&lt;/p&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Directive avec input signal</h2>
+            <pre><code class="language-typescript">import { Directive, ElementRef, inject, input, effect } from '@angular/core';
+
+@Directive({
+  selector: '[appHighlight]',
+  standalone: true
+})
+export class HighlightDirective {
+  // Input avec le même nom que le sélecteur
+  appHighlight = input('yellow');
+
+  private el = inject(ElementRef);
+
+  constructor() {
+    effect(() =&gt; {
+      this.el.nativeElement.style.backgroundColor = this.appHighlight();
+    });
+  }
+}</code></pre>
+            <pre><code class="language-html">&lt;p appHighlight&gt;Jaune par défaut&lt;/p&gt;
+&lt;p [appHighlight]="'lightblue'"&gt;Bleu clair&lt;/p&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>HostListener - Écouter les événements</h2>
+            <pre><code class="language-typescript">import { Directive, HostListener, ElementRef, inject, input } from '@angular/core';
+
+@Directive({
+  selector: '[appHighlight]',
+  standalone: true
+})
+export class HighlightDirective {
+  appHighlight = input('yellow');
+  private el = inject(ElementRef);
+  private originalColor = '';
+
+  @HostListener('mouseenter')
+  onMouseEnter() {
+    this.originalColor = this.el.nativeElement.style.backgroundColor;
+    this.el.nativeElement.style.backgroundColor = this.appHighlight();
+  }
+
+  @HostListener('mouseleave')
+  onMouseLeave() {
+    this.el.nativeElement.style.backgroundColor = this.originalColor;
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Alternative moderne : host</h2>
+            <pre><code class="language-typescript">@Directive({
+  selector: '[appHighlight]',
+  standalone: true,
+  host: {
+    '(mouseenter)': 'onMouseEnter()',
+    '(mouseleave)': 'onMouseLeave()',
+    '[style.cursor]': '"pointer"'
+  }
+})
+export class HighlightDirective {
+  appHighlight = input('yellow');
+  private el = inject(ElementRef);
+  private originalColor = '';
+
+  onMouseEnter() {
+    this.originalColor = this.el.nativeElement.style.backgroundColor;
+    this.el.nativeElement.style.backgroundColor = this.appHighlight();
+  }
+
+  onMouseLeave() {
+    this.el.nativeElement.style.backgroundColor = this.originalColor;
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Directive tooltip</h2>
+            <pre><code class="language-typescript">@Directive({
+  selector: '[appTooltip]',
+  standalone: true
+})
+export class TooltipDirective {
+  appTooltip = input.required&lt;string&gt;();
+  private el = inject(ElementRef);
+  private tooltipEl: HTMLDivElement | null = null;
+
+  @HostListener('mouseenter')
+  show() {
+    this.tooltipEl = document.createElement('div');
+    this.tooltipEl.textContent = this.appTooltip();
+    this.tooltipEl.className = 'tooltip';
+    document.body.appendChild(this.tooltipEl);
+    // Positionner le tooltip...
+  }
+
+  @HostListener('mouseleave')
+  hide() {
+    this.tooltipEl?.remove();
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Directive autofocus</h2>
+            <pre><code class="language-typescript">import { Directive, ElementRef, inject } from '@angular/core';
+
+@Directive({
+  selector: '[appAutofocus]',
+  standalone: true
+})
+export class AutofocusDirective {
+  private el = inject(ElementRef);
+
+  ngAfterViewInit() {
+    this.el.nativeElement.focus();
+  }
+}</code></pre>
+            <pre><code class="language-html">&lt;input appAutofocus placeholder="Focus automatique"&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Directive click-outside</h2>
+            <pre><code class="language-typescript">@Directive({
+  selector: '[appClickOutside]',
+  standalone: true
+})
+export class ClickOutsideDirective {
+  appClickOutside = output&lt;void&gt;();
+  private el = inject(ElementRef);
+
+  @HostListener('document:click', ['$event.target'])
+  onClick(target: HTMLElement) {
+    const clickedInside = this.el.nativeElement.contains(target);
+    if (!clickedInside) {
+      this.appClickOutside.emit();
+    }
+  }
+}</code></pre>
+            <pre><code class="language-html">&lt;div class="dropdown" (appClickOutside)="closeDropdown()"&gt;
+  &lt;!-- Contenu du dropdown --&gt;
+&lt;/div&gt;</code></pre>
+          </section>
+
+          <section>
+            <h2>Quand utiliser quoi ?</h2>
+            <table>
+              <tr><th>Besoin</th><th>Solution</th></tr>
+              <tr><td>Classe
+                  conditionnelle</td><td><code>[class.x]="condition"</code></td></tr>
+              <tr><td>Style
+                  dynamique</td><td><code>[style.prop]="value"</code></td></tr>
+              <tr><td>Comportement réutilisable</td><td>Directive
+                  d'attribut</td></tr>
+              <tr><td>Écouter événements hôte</td><td><code>@HostListener</code>
+                  ou <code>host: {}</code></td></tr>
+              <tr><td>Accéder au DOM</td><td><code>ElementRef</code> +
+                  <code>inject()</code></td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Bonnes pratiques</h2>
+            <p><strong>✅ À faire</strong></p>
+            <pre><code class="language-typescript">// Utiliser inject() au lieu du constructor
+private el = inject(ElementRef);
+
+// Input signals pour la réactivité
+appHighlight = input('yellow');
+
+// effect() pour réagir aux changements
+effect(() =&gt; { ... });</code></pre>
+            <p><strong>❌ À éviter</strong></p>
+            <ul>
+              <li>Manipulation directe excessive du DOM</li>
+              <li>Logique complexe dans les directives</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Exercice 09 - Directives</h2>
+            <ol>
+              <li>Créer <code>HighlightDirective</code> - Surbrillance au
+                survol</li>
+              <li>Créer <code>TooltipDirective</code> - Info-bulle</li>
+              <li>Appliquer aux éléments de <code>PokemonCard</code></li>
+              <li>Utiliser <code>[class]</code> pour les styles
+                conditionnels</li>
+            </ol>
+            <p><strong>20 minutes</strong></p>
+          </section>
+
+          <section>
+            <h2>Résumé</h2>
+            <ul>
+              <li><code>[class.x]</code> et <code>[style.prop]</code>
+                préférés</li>
+              <li>Directives d'attribut pour comportements réutilisables</li>
+              <li><code>ElementRef</code> + <code>inject()</code> pour le
+                DOM</li>
+              <li><code>@HostListener</code> ou <code>host: {}</code> pour
+                événements</li>
+              <li>Input signals avec <code>effect()</code> pour réactivité</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- COLUMN 10: HTTPCLIENT (Module 9) -->
+        <!-- ============================================ -->
+        <section>
+          <section>
+            <h1>HttpClient et API REST</h1>
+            <p>Connexion à PokeAPI</p>
+          </section>
+
+          <section>
+            <h2>Objectifs</h2>
+            <ul>
+              <li>Configurer HttpClient avec
+                <code>provideHttpClient()</code></li>
+              <li>Effectuer des requêtes GET, POST, PUT, DELETE</li>
+              <li>Gérer les erreurs et le loading state</li>
+              <li>Intégrer avec les Signals</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Configuration</h2>
+            <pre><code class="language-typescript">// app.config.ts
+import { ApplicationConfig } from '@angular/core';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideHttpClient(withFetch())
+  ]
+};</code></pre>
+            <p><code>withFetch()</code> utilise l'API Fetch moderne.</p>
+          </section>
+
+          <section>
+            <h2>Pourquoi withFetch() ?</h2>
+            <table>
+              <tr><th>Avantage</th><th>Description</th></tr>
+              <tr><td>Performance</td><td>Plus léger que XHR</td></tr>
+              <tr><td>SSR</td><td>Meilleur support server-side</td></tr>
+              <tr><td>Moderne</td><td>API native du navigateur</td></tr>
+              <tr><td>Streams</td><td>Support des ReadableStream</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Injecter HttpClient</h2>
+            <pre><code class="language-typescript">import { Injectable, inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+@Injectable({ providedIn: 'root' })
+export class PokemonService {
+  private http = inject(HttpClient);
+  private apiUrl = 'https://pokeapi.co/api/v2';
+
+  // Méthodes HTTP ici
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>GET - Récupérer des données</h2>
+            <pre><code class="language-typescript">import { Observable } from 'rxjs';
+
+@Injectable({ providedIn: 'root' })
+export class PokemonService {
+  private http = inject(HttpClient);
+  private apiUrl = 'https://pokeapi.co/api/v2';
+
+  getPokemons(): Observable&lt;PokemonListResponse&gt; {
+    return this.http.get&lt;PokemonListResponse&gt;(
+      `${this.apiUrl}/pokemon?limit=151`
+    );
+  }
+
+  getPokemon(id: number): Observable&lt;Pokemon&gt; {
+    return this.http.get&lt;Pokemon&gt;(`${this.apiUrl}/pokemon/${id}`);
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Utiliser l'Observable</h2>
+            <pre><code class="language-typescript">@Component({
+  template: `
+    @for (pokemon of pokemons(); track pokemon.name) {
+      &lt;app-pokemon-card [pokemon]="pokemon" /&gt;
+    }
+  `
+})
+export class PokemonList {
+  private pokemonService = inject(PokemonService);
+  pokemons = signal&lt;Pokemon[]&gt;([]);
+
+  ngOnInit() {
+    this.pokemonService.getPokemons().subscribe(data =&gt; {
+      this.pokemons.set(data.results);
+    });
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Interfaces pour PokeAPI</h2>
+            <pre><code class="language-typescript">// models/pokemon.model.ts
+              // Interface pour notre application
+              export interface Pokemon {
+                id: number;
+                name: string;
+                types: string[];
+                sprite: string;
+                hp: number;
+                attack: number;
+                defense: number;
+              }
+              
+              // Interfaces pour l'API PokeAPI
+              export interface PokeApiListResponse {
+                count: number;
+                results: { name: string; url: string }[];
+              }
+              
+              export interface PokeApiPokemon {
+                id: number;
+                name: string;
+                sprites: {
+                  front_default: string;
+                };
+                types: {
+                  slot: number;
+                  type: { name: string };
+                }[];
+                stats: {
+                  base_stat: number;
+                  stat: { name: string };
+                }[];
+              }
+              
+</code></pre>
+          </section>
+
+          <section>
+            <h2>PokeAPI - Endpoints utiles</h2>
+            <pre><code class="language-bash"># Liste des 151 premiers Pokémon
+GET https://pokeapi.co/api/v2/pokemon?limit=151
+
+# Détails d'un Pokémon
+GET https://pokeapi.co/api/v2/pokemon/25  # Pikachu
+GET https://pokeapi.co/api/v2/pokemon/pikachu
+
+# Pokémon par type
+GET https://pokeapi.co/api/v2/type/fire
+
+# Sprites (images)
+https://raw.githubusercontent.com/PokeAPI/sprites/
+  master/sprites/pokemon/25.png</code></pre>
+          </section>
+
+          <section>
+            <h2>Gestion des erreurs</h2>
+            <pre><code class="language-typescript">import { catchError, of } from 'rxjs';
+
+@Injectable({ providedIn: 'root' })
+export class PokemonService {
+  getPokemons(): Observable&lt;PokemonListResponse&gt; {
+    return this.http.get&lt;PokemonListResponse&gt;(
+      `${this.apiUrl}/pokemon?limit=151`
+    ).pipe(
+      catchError(error =&gt; {
+        console.error('Erreur API:', error);
+        return of({ count: 0, results: [] });
+      })
+    );
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Gestion erreurs - subscribe</h2>
+            <pre><code class="language-typescript">// Dans le composant
+this.pokemonService.getPokemons().subscribe({
+  next: (response) =&gt; {
+    this.pokemons.set(response.results);
+  },
+  error: (error) =&gt; {
+    console.error('Erreur:', error);
+    this.error.set('Impossible de charger les Pokémon');
+  },
+  complete: () =&gt; {
+    console.log('Chargement terminé');
+  }
+});</code></pre>
+          </section>
+
+          <section>
+            <h2>Loading State avec Signals</h2>
+            <pre><code class="language-typescript">@Component({
+  template: `
+    @if (loading()) {
+      &lt;app-spinner /&gt;
+    } @else if (error()) {
+      &lt;p class="error"&gt;{{ error() }}&lt;/p&gt;
+      &lt;button (click)="loadPokemons()"&gt;Réessayer&lt;/button&gt;
+    } @else {
+      @for (pokemon of pokemons(); track pokemon.name) {
+        &lt;app-pokemon-card [pokemon]="pokemon" /&gt;
+      } @empty {
+        &lt;p&gt;Aucun Pokémon trouvé&lt;/p&gt;
+      }
+    }
+  `
+})
+export class PokemonList {
+  pokemons = signal&lt;Pokemon[]&gt;([]);
+  loading = signal(false);
+  error = signal&lt;string | null&gt;(null);
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Méthode loadPokemons</h2>
+            <pre><code class="language-typescript">loadPokemons() {
+  this.loading.set(true);
+  this.error.set(null);
+
+  this.pokemonService.getPokemons().subscribe({
+    next: (data) =&gt; this.pokemons.set(data.results),
+    error: (err) =&gt; this.error.set('Erreur de chargement'),
+    complete: () =&gt; this.loading.set(false)
+  });
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Service complet avec Signals</h2>
+            <pre><code class="language-typescript">@Injectable({ providedIn: 'root' })
+export class PokemonService {
+  private http = inject(HttpClient);
+  private apiUrl = 'https://pokeapi.co/api/v2';
+
+  // État privé
+  private pokemonsSignal = signal&lt;Pokemon[]&gt;([]);
+  private loadingSignal = signal(false);
+  private errorSignal = signal&lt;string | null&gt;(null);
+
+  // Expositions publiques (lecture seule)
+  readonly pokemons = this.pokemonsSignal.asReadonly();
+  readonly loading = this.loadingSignal.asReadonly();
+  readonly error = this.errorSignal.asReadonly();
+
+  readonly pokemonCount = computed(() =&gt;
+    this.pokemonsSignal().length
+  );
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Service - loadPokemons</h2>
+            <pre><code class="language-typescript">loadPokemons(): void {
+  this.loadingSignal.set(true);
+  this.errorSignal.set(null);
+
+  this.http.get&lt;PokemonListResponse&gt;(
+    `${this.apiUrl}/pokemon?limit=151`
+  ).subscribe({
+    next: (response) =&gt; this.pokemonsSignal.set(response.results),
+    error: (err) =&gt; this.errorSignal.set('Erreur de chargement'),
+    complete: () =&gt; this.loadingSignal.set(false)
+  });
+}
+
+getPokemonDetail(id: number): Observable&lt;Pokemon&gt; {
+  return this.http.get&lt;Pokemon&gt;(`${this.apiUrl}/pokemon/${id}`);
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Charger plusieurs Pokémon</h2>
+            <pre><code class="language-typescript">import { forkJoin } from 'rxjs';
+
+@Injectable({ providedIn: 'root' })
+export class PokemonService {
+  loadPokemonDetails(ids: number[]): Observable&lt;Pokemon[]&gt; {
+    const requests = ids.map(id =&gt;
+      this.http.get&lt;Pokemon&gt;(`${this.apiUrl}/pokemon/${id}`)
+    );
+    return forkJoin(requests);
+  }
+}</code></pre>
+            <pre><code class="language-typescript">// Charger les 10 premiers avec détails
+const ids = Array.from({ length: 10 }, (_, i) =&gt; i + 1);
+this.pokemonService.loadPokemonDetails(ids).subscribe(pokemons =&gt; {
+  console.log('Pokémon avec détails:', pokemons);
+});</code></pre>
+          </section>
+
+          <section>
+            <h2>Paramètres de requête</h2>
+            <pre><code class="language-typescript">import { HttpParams } from '@angular/common/http';
+
+@Injectable({ providedIn: 'root' })
+export class PokemonService {
+  getPokemons(limit = 151, offset = 0): Observable&lt;PokemonListResponse&gt; {
+    const params = new HttpParams()
+      .set('limit', limit.toString())
+      .set('offset', offset.toString());
+
+    return this.http.get&lt;PokemonListResponse&gt;(
+      `${this.apiUrl}/pokemon`,
+      { params }
+    );
+    // GET /pokemon?limit=151&amp;offset=0
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Exemple complet : PokemonList</h2>
+            <pre><code class="language-typescript">@Component({
+  selector: 'app-pokemon-list',
+  imports: [PokemonCard],
+  template: `
+    &lt;div class="header"&gt;
+      &lt;h2&gt;Pokédex&lt;/h2&gt;
+      &lt;input (input)="onSearch($event)" placeholder="Rechercher..." /&gt;
+    &lt;/div&gt;
+
+    @if (pokemonService.loading()) {
+      &lt;div class="loading"&gt;Chargement...&lt;/div&gt;
+    } @else if (pokemonService.error()) {
+      &lt;div class="error"&gt;
+        {{ pokemonService.error() }}
+        &lt;button (click)="loadPokemons()"&gt;Réessayer&lt;/button&gt;
+      &lt;/div&gt;
+    } @else {
+      &lt;div class="pokemon-grid"&gt;
+        @for (pokemon of filteredPokemons(); track pokemon.name) {
+          &lt;app-pokemon-card [pokemon]="pokemon" /&gt;
+        }
+      &lt;/div&gt;
+    }
+  `
+})</code></pre>
+          </section>
+
+          <section>
+            <h2>PokemonList - Classe</h2>
+            <pre><code class="language-typescript">export class PokemonList {
+  pokemonService = inject(PokemonService);
+  searchQuery = signal('');
+
+  filteredPokemons = computed(() =&gt;
+    this.pokemonService.pokemons().filter(p =&gt;
+      p.name.includes(this.searchQuery().toLowerCase())
+    )
+  );
+
+  ngOnInit() {
+    this.loadPokemons();
+  }
+
+  loadPokemons() {
+    this.pokemonService.loadPokemons();
+  }
+
+  onSearch(event: Event) {
+    this.searchQuery.set((event.target as HTMLInputElement).value);
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Exercice 10 - HttpClient</h2>
+            <ol>
+              <li>Configurer <code>provideHttpClient(withFetch())</code></li>
+              <li>Créer <code>PokemonService</code> avec méthodes HTTP</li>
+              <li>Implémenter loading et error states</li>
+              <li>Afficher la liste des 151 Pokémon</li>
+              <li>Bonus : afficher les détails d'un Pokémon</li>
+            </ol>
+            <p><strong>30 minutes</strong></p>
+          </section>
+
+          <section>
+            <h2>Résumé</h2>
+            <ul>
+              <li><code>provideHttpClient(withFetch())</code> dans
+                app.config.ts</li>
+              <li><code>inject(HttpClient)</code> dans les services</li>
+              <li>GET, POST, PUT, PATCH, DELETE</li>
+              <li>Gestion erreurs avec <code>catchError</code> ou
+                <code>subscribe({ error })</code></li>
+              <li>Loading state avec signals</li>
+              <li><code>HttpParams</code> pour les paramètres</li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- COLUMN 11: FORMULAIRES RÉACTIFS (Module 10) -->
+        <!-- ============================================ -->
+        <section>
+          <section>
+            <h1>Formulaires Réactifs</h1>
+            <p>FormControl, FormGroup, Validators</p>
+          </section>
+
+          <section>
+            <h2>Objectifs</h2>
+            <ul>
+              <li>Comprendre Reactive Forms vs Template-driven</li>
+              <li>Créer des formulaires avec <code>FormGroup</code> et
+                <code>FormControl</code></li>
+              <li>Utiliser <code>FormBuilder</code> avec
+                <code>inject()</code></li>
+              <li>Implémenter la validation</li>
+              <li>Afficher les erreurs</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Deux approches</h2>
+            <table>
+              <tr><th>Template-driven</th><th>Reactive</th></tr>
+              <tr><td><code>[(ngModel)]</code></td><td><code>FormControl</code></td></tr>
+              <tr><td>Directive-based</td><td>Code-based</td></tr>
+              <tr><td>Simple, rapide</td><td>Puissant, testable</td></tr>
+              <tr><td>Validation HTML</td><td>Validation TypeScript</td></tr>
+            </table>
+            <p><strong>Recommandation</strong> : Reactive Forms pour les apps
+              professionnelles.</p>
+          </section>
+
+          <section>
+            <h2>Configuration</h2>
+            <pre><code class="language-typescript">import { Component } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+
+@Component({
+  selector: 'app-pokemon-filter',
+  imports: [ReactiveFormsModule], // ← Import nécessaire
+  template: `...`
+})
+export class PokemonFilter { }</code></pre>
+          </section>
+
+          <section>
+            <h2>FormControl - Basique</h2>
+            <pre><code class="language-typescript">import { Component } from '@angular/core';
+import { ReactiveFormsModule, FormControl } from '@angular/forms';
+
+@Component({
+  imports: [ReactiveFormsModule],
+  template: `
+    &lt;input [formControl]="searchControl" placeholder="Rechercher..."&gt;
+    &lt;p&gt;Recherche: {{ searchControl.value }}&lt;/p&gt;
+  `
+})
+export class SearchBar {
+  searchControl = new FormControl('');
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>FormGroup - Plusieurs champs</h2>
+            <pre><code class="language-typescript">import { FormGroup, FormControl } from '@angular/forms';
+
+@Component({
+  imports: [ReactiveFormsModule],
+  template: `
+    &lt;form [formGroup]="filterForm" (ngSubmit)="onFilter()"&gt;
+      &lt;input formControlName="name" placeholder="Nom du Pokémon"&gt;
+      &lt;select formControlName="type"&gt;
+        &lt;option value=""&gt;Tous les types&lt;/option&gt;
+        &lt;option value="fire"&gt;Feu&lt;/option&gt;
+        &lt;option value="water"&gt;Eau&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;button type="submit"&gt;Filtrer&lt;/button&gt;
+    &lt;/form&gt;
+  `
+})
+export class PokemonFilter {
+  filterForm = new FormGroup({
+    name: new FormControl(''),
+    type: new FormControl('')
+  });
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>FormBuilder - Syntaxe simplifiée</h2>
+            <pre><code class="language-typescript">import { Component, inject } from '@angular/core';
+import { ReactiveFormsModule, FormBuilder } from '@angular/forms';
+
+@Component({
+  imports: [ReactiveFormsModule],
+  template: `
+    &lt;form [formGroup]="filterForm" (ngSubmit)="onFilter()"&gt;
+      &lt;input formControlName="name" placeholder="Nom"&gt;
+      &lt;select formControlName="type"&gt;
+        &lt;option value=""&gt;Tous les types&lt;/option&gt;
+        &lt;option value="fire"&gt;Feu&lt;/option&gt;
+        &lt;option value="water"&gt;Eau&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;button type="submit"&gt;Rechercher&lt;/button&gt;
+    &lt;/form&gt;
+  `
+})
+export class PokemonFilter {
+  private fb = inject(FormBuilder);
+
+  filterForm = this.fb.group({
+    name: [''],
+    type: [''],
+    minStats: [0]
+  });
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Validators - Validation intégrée</h2>
+            <pre><code class="language-typescript">import { Validators } from '@angular/forms';
+
+@Component({...})
+export class PokemonFilter {
+  private fb = inject(FormBuilder);
+
+  filterForm = this.fb.group({
+    name: ['', Validators.minLength(2)],
+    type: [''],
+    minStats: [0, [Validators.min(0), Validators.max(255)]],
+    generation: [1, [Validators.required, Validators.min(1)]]
+  });
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Validators disponibles</h2>
+            <table>
+              <tr><th>Validator</th><th>Usage</th></tr>
+              <tr><td><code>Validators.required</code></td><td>Champ
+                  obligatoire</td></tr>
+              <tr><td><code>Validators.minLength(n)</code></td><td>Longueur
+                  minimale</td></tr>
+              <tr><td><code>Validators.maxLength(n)</code></td><td>Longueur
+                  maximale</td></tr>
+              <tr><td><code>Validators.min(n)</code></td><td>Valeur
+                  minimale</td></tr>
+              <tr><td><code>Validators.max(n)</code></td><td>Valeur
+                  maximale</td></tr>
+              <tr><td><code>Validators.email</code></td><td>Format
+                  email</td></tr>
+              <tr><td><code>Validators.pattern(regex)</code></td><td>Regex
+                  personnalisée</td></tr>
+            </table>
+          </section>
+
+          <section>
+            <h2>Afficher les erreurs avec @if</h2>
+            <pre><code class="language-typescript">@Component({
+  template: `
+    &lt;form [formGroup]="filterForm"&gt;
+      &lt;div class="field"&gt;
+        &lt;label&gt;Nom du Pokémon&lt;/label&gt;
+        &lt;input formControlName="name"&gt;
+
+        @if (filterForm.controls.name.invalid &amp;&amp;
+             filterForm.controls.name.touched) {
+          &lt;div class="errors"&gt;
+            @if (filterForm.controls.name.errors?.['minlength']) {
+              &lt;span&gt;Minimum 2 caractères&lt;/span&gt;
+            }
+          &lt;/div&gt;
+        }
+      &lt;/div&gt;
+    &lt;/form&gt;
+  `
+})</code></pre>
+          </section>
+
+          <section>
+            <h2>Simplifier avec getter</h2>
+            <pre><code class="language-typescript">@Component({
+  template: `
+    &lt;input formControlName="minStats" type="number"&gt;
+
+    @if (minStats.invalid &amp;&amp; minStats.touched) {
+      &lt;div class="errors"&gt;
+        @if (minStats.errors?.['min']) {
+          &lt;span&gt;Minimum: {{ minStats.errors?.['min'].min }}&lt;/span&gt;
+        }
+        @if (minStats.errors?.['max']) {
+          &lt;span&gt;Maximum: {{ minStats.errors?.['max'].max }}&lt;/span&gt;
+        }
+      &lt;/div&gt;
+    }
+  `
+})
+export class PokemonFilter {
+  // Getter pour accès simplifié
+  get minStats() {
+    return this.filterForm.controls.minStats;
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>États du formulaire</h2>
+            <pre><code class="language-typescript">// FormControl / FormGroup
+filterForm.valid      // true si toutes les validations passent
+filterForm.invalid    // true si au moins une erreur
+filterForm.dirty      // true si l'utilisateur a modifié
+filterForm.pristine   // true si pas de modification
+filterForm.touched    // true si l'utilisateur a focus puis blur
+filterForm.untouched  // true si jamais touché</code></pre>
+            <pre><code class="language-html">@if (filterForm.invalid &amp;&amp; filterForm.dirty) {
+  &lt;p&gt;Veuillez corriger les filtres&lt;/p&gt;
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Désactiver le bouton submit</h2>
+            <pre><code class="language-html">&lt;form [formGroup]="filterForm" (ngSubmit)="onFilter()"&gt;
+  &lt;!-- ... champs ... --&gt;
+
+  &lt;button
+    type="submit"
+    [disabled]="filterForm.invalid"&gt;
+    Rechercher
+  &lt;/button&gt;
+&lt;/form&gt;</code></pre>
+            <p>Le bouton est désactivé tant que le formulaire est invalide.</p>
+          </section>
+
+          <section>
+            <h2>Styles CSS pour validation</h2>
+            <pre><code class="language-css">/* Champ invalide et touché */
+input.ng-invalid.ng-touched {
+  border-color: #f44336;
+}
+
+/* Champ valide et touché */
+input.ng-valid.ng-touched {
+  border-color: #4caf50;
+}
+
+/* Message d'erreur */
+.errors {
+  color: #f44336;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}</code></pre>
+            <p>Angular ajoute automatiquement les classes <code>ng-valid</code>,
+              <code>ng-invalid</code>, <code>ng-touched</code>.</p>
+          </section>
+
+          <section>
+            <h2>Validateur personnalisé</h2>
+            <pre><code class="language-typescript">import { AbstractControl, ValidationErrors } from '@angular/forms';
+
+// Fonction validateur
+function noWhitespace(control: AbstractControl): ValidationErrors | null {
+  const value = control.value;
+  if (value &amp;&amp; value.trim().length === 0) {
+    return { whitespace: true };
+  }
+  return null;
+}
+
+// Utilisation
+filterForm = this.fb.group({
+  name: ['', [Validators.required, noWhitespace]]
+});</code></pre>
+            <pre><code class="language-html">@if (name.errors?.['whitespace']) {
+  &lt;span&gt;Le nom ne peut pas être vide&lt;/span&gt;
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>reset() - Réinitialiser</h2>
+            <pre><code class="language-typescript">clearFilters() {
+  // Réinitialiser le formulaire
+  this.filterForm.reset();
+
+  // Ou avec des valeurs par défaut
+  this.filterForm.reset({
+    name: '',
+    type: '',
+    minStats: 0
+  });
+
+  // Recharger tous les Pokémon
+  this.pokemonService.loadPokemons();
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>setValue() vs patchValue()</h2>
+            <pre><code class="language-typescript">// setValue - Remplacer TOUS les champs (erreur si manquant)
+this.filterForm.setValue({
+  name: 'pikachu',
+  type: 'electric',
+  minStats: 50
+});
+
+// patchValue - Modifier certains champs seulement
+this.filterForm.patchValue({
+  type: 'fire'
+});
+// Les autres champs restent inchangés</code></pre>
+          </section>
+
+          <section>
+            <h2>valueChanges - Recherche réactive</h2>
+            <pre><code class="language-typescript">import { debounceTime, distinctUntilChanged, takeUntilDestroyed } from 'rxjs';
+
+export class PokemonSearch {
+  searchControl = new FormControl('');
+
+  constructor() {
+    this.searchControl.valueChanges.pipe(
+      debounceTime(300),
+      distinctUntilChanged(),
+      takeUntilDestroyed()
+    ).subscribe(query =&gt; {
+      this.pokemonService.filterByName(query ?? '');
+    });
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Exemple complet : PokemonFilter</h2>
+            <pre><code class="language-typescript">@Component({
+  selector: 'app-pokemon-filter',
+  imports: [ReactiveFormsModule],
+  template: `
+    &lt;form [formGroup]="filterForm" (ngSubmit)="onFilter()"&gt;
+      &lt;div class="field"&gt;
+        &lt;label&gt;Nom&lt;/label&gt;
+        &lt;input formControlName="name" placeholder="Pikachu..."&gt;
+        @if (name.invalid &amp;&amp; name.touched) {
+          &lt;div class="error"&gt;Minimum 2 caractères&lt;/div&gt;
+        }
+      &lt;/div&gt;
+
+      &lt;div class="field"&gt;
+        &lt;label&gt;Type&lt;/label&gt;
+        &lt;select formControlName="type"&gt;
+          &lt;option value=""&gt;Tous&lt;/option&gt;
+          @for (t of types; track t) {
+            &lt;option [value]="t"&gt;{{ t }}&lt;/option&gt;
+          }
+        &lt;/select&gt;
+      &lt;/div&gt;
+
+      &lt;button type="button" (click)="clearFilters()"&gt;Reset&lt;/button&gt;
+      &lt;button type="submit" [disabled]="filterForm.invalid"&gt;
+        Rechercher
+      &lt;/button&gt;
+    &lt;/form&gt;
+  `
+})</code></pre>
+          </section>
+
+          <section>
+            <h2>PokemonFilter - Classe</h2>
+            <pre><code class="language-typescript">export class PokemonFilter {
+  private fb = inject(FormBuilder);
+  private pokemonService = inject(PokemonService);
+
+  types = ['fire', 'water', 'grass', 'electric', 'psychic'];
+
+  filterForm = this.fb.group({
+    name: ['', Validators.minLength(2)],
+    type: [''],
+    minStats: [0, [Validators.min(0), Validators.max(255)]]
+  });
+
+  get name() { return this.filterForm.controls.name; }
+
+  onFilter() {
+    if (this.filterForm.valid) {
+      const { name, type, minStats } = this.filterForm.value;
+      this.pokemonService.applyFilters({ name, type, minStats });
+    }
+  }
+
+  clearFilters() {
+    this.filterForm.reset({ name: '', type: '', minStats: 0 });
+    this.pokemonService.clearFilters();
+  }
+}</code></pre>
+          </section>
+
+          <section>
+            <h2>Exercice 11 - Formulaires</h2>
+            <ol>
+              <li>Créer <code>PokemonFilter</code> avec FormBuilder</li>
+              <li>Champs : name, type (select), minStats</li>
+              <li>Implémenter l'affichage des erreurs</li>
+              <li>Connecter au <code>PokemonService.applyFilters()</code></li>
+              <li>Ajouter un bouton de réinitialisation</li>
+            </ol>
+            <p><strong>25 minutes</strong></p>
+          </section>
+
+          <section>
+            <h2>Résumé</h2>
+            <ul>
+              <li><code>ReactiveFormsModule</code> à importer</li>
+              <li><code>FormBuilder</code> avec <code>inject()</code>
+                (recommandé)</li>
+              <li><code>Validators</code> : required, minLength, email...</li>
+              <li>Erreurs avec <code>@if
+                  (control.errors?.['validator'])</code></li>
+              <li>États : valid, invalid, touched, dirty</li>
+              <li><code>reset()</code>, <code>setValue()</code>,
+                <code>patchValue()</code></li>
+            </ul>
+          </section>
+        </section>
+
+        <!-- ============================================ -->
+        <!-- FIN DE LA FORMATION -->
+        <!-- ============================================ -->
+        <section>
+          <section>
+            <h1>Récapitulatif</h1>
+            <h2>Formation Angular 21</h2>
+          </section>
+
+          <section>
+            <h2>Jour 1</h2>
+            <ul>
+              <li>Installation et structure Angular 21</li>
+              <li>Composants standalone</li>
+              <li>Data binding et Signals</li>
+              <li>Control flow (@if, @for)</li>
+              <li>Services et inject()</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Jour 2</h2>
+            <ul>
+              <li>Communication input/output/model</li>
+              <li>Pipes et transformations</li>
+              <li>Directives d'attribut</li>
+              <li>HttpClient et API REST</li>
+              <li>Formulaires réactifs</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Prochaines étapes</h2>
+            <ul>
+              <li><strong>Routing</strong> : Navigation entre pages</li>
+              <li><strong>Guards</strong> : Protection des routes</li>
+              <li><strong>Interceptors</strong> : Authentification HTTP</li>
+              <li><strong>Testing</strong> : Vitest, Cypress</li>
+              <li><strong>SSR</strong> : Server-Side Rendering</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Ressources</h2>
+            <ul>
+              <li><strong>Documentation</strong> : angular.dev</li>
+              <li><strong>Blog</strong> : blog.angular.io</li>
+              <li><strong>GitHub</strong> : github.com/angular/angular</li>
+              <li><strong>Stack Overflow</strong> : tag [angular]</li>
+              <li><strong>Angular Challenges</strong> : <a
+                  href="https://angular-challenges.vercel.app/">Angular
+                  Challenges</a></li>
+              <li><strong>Discord Bonjour Angular</strong> : <a
+                  href="slides-revealjs.html">https://www.bonjour-angular.com/</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h1>Questions ?</h1>
+            <h2>Merci pour votre participation !</h2>
+            <p>Bonne continuation avec Angular !</p>
+          </section>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Reveal.js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+
+    <script>
+    Reveal.initialize({
+      // Navigation
+      hash: true,
+      history: true,
+
+      // Display
+      width: 1280,
+      height: 720,
+      margin: 0.1,
+
+      // Slide number
+      slideNumber: 'c/t',
+
+      // Transitions
+      transition: 'slide',
+      transitionSpeed: 'default',
+
+      // Plugins
+      plugins: [RevealHighlight, RevealNotes]
+    });
+  </script>
+  </body>
+</html>

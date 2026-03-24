@@ -12,7 +12,10 @@
     "serve:07": "pnpm --filter etape-07-communication start",
     "serve:08": "pnpm --filter etape-08-pipes start",
     "serve:09": "pnpm --filter etape-09-directives start",
-    "serve:10": "pnpm --filter etape-10-httpclient start"
+    "serve:10": "pnpm --filter etape-10-httpclient start",
+    "serve:11": "pnpm --filter etape-11-formulaires start",
+    "serve:finale": "pnpm --filter pokedex-finale start",
+    "serve:slides": "npx live-server slides-revealjs.html"
   },
   "packageManager": "pnpm@10.6.5"
 }
