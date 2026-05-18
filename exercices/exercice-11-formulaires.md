@@ -110,9 +110,9 @@ Abonnez-vous à `filterForm.valueChanges` et émettez les valeurs via un `output
 `Validators.min(0)` et `Validators.max(255)` combinés : `[Validators.min(0), Validators.max(255)]`
 </details>
 
-## Fin des exercices
+## Fin du Jour 2
 
-Félicitations ! Vous maîtrisez maintenant :
+Félicitations ! À l'issue des Jours 1 et 2, vous maîtrisez :
 
 - Composants et templates
 - Data binding et Signals
@@ -124,4 +124,6 @@ Félicitations ! Vous maîtrisez maintenant :
 - HttpClient et API REST
 - Formulaires réactifs
 
-Votre Pokedex est complet !
+## Prochaine étape
+
+[Exercice 12 - Formulaires Avancés](./exercice-12-formulaires-avances.md) — début du Jour 3.
